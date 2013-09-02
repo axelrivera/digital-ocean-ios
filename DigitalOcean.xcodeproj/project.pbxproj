@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		162322781791DCD700EE05EF /* DOSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 162322771791DCD700EE05EF /* DOSize.m */; };
+		162322791791DCD700EE05EF /* DOSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 162322771791DCD700EE05EF /* DOSize.m */; };
+		1623227D1791F2D300EE05EF /* DOData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623227C1791F2D300EE05EF /* DOData.m */; };
+		1623227E1791F2D300EE05EF /* DOData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623227C1791F2D300EE05EF /* DOData.m */; };
+		162322811791F91E00EE05EF /* NSArray+DigitalOcean.m in Sources */ = {isa = PBXBuildFile; fileRef = 162322801791F91E00EE05EF /* NSArray+DigitalOcean.m */; };
+		162322821791F91E00EE05EF /* NSArray+DigitalOcean.m in Sources */ = {isa = PBXBuildFile; fileRef = 162322801791F91E00EE05EF /* NSArray+DigitalOcean.m */; };
+		162322861791FD8500EE05EF /* DOObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 162322851791FD8500EE05EF /* DOObject.m */; };
+		162322871791FD8500EE05EF /* DOObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 162322851791FD8500EE05EF /* DOObject.m */; };
+		1623228A17920F2600EE05EF /* UIColor+DigitalOcean.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623228917920F2600EE05EF /* UIColor+DigitalOcean.m */; };
+		1623228B17920F2600EE05EF /* UIColor+DigitalOcean.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623228917920F2600EE05EF /* UIColor+DigitalOcean.m */; };
+		162322901792124900EE05EF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623228E1792124900EE05EF /* MainViewController.m */; };
+		162322911792124900EE05EF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623228E1792124900EE05EF /* MainViewController.m */; };
+		162322921792124900EE05EF /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1623228F1792124900EE05EF /* MainViewController.xib */; };
+		162322931792124900EE05EF /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1623228F1792124900EE05EF /* MainViewController.xib */; };
 		162423841791128E00B77711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162423831791128E00B77711 /* Foundation.framework */; };
 		162423861791128E00B77711 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162423851791128E00B77711 /* CoreGraphics.framework */; };
 		162423881791128E00B77711 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162423871791128E00B77711 /* UIKit.framework */; };
@@ -19,6 +33,28 @@
 		1624239F1791128E00B77711 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162423871791128E00B77711 /* UIKit.framework */; };
 		162423A71791128E00B77711 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 162423A51791128E00B77711 /* InfoPlist.strings */; };
 		162423A91791128E00B77711 /* DigitalOceanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423A81791128E00B77711 /* DigitalOceanTests.m */; };
+		162423B5179114A400B77711 /* DOAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423B4179114A400B77711 /* DOAPIClient.m */; };
+		162423B6179114A400B77711 /* DOAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423B4179114A400B77711 /* DOAPIClient.m */; };
+		162423BC1791172D00B77711 /* DODroplet.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423BB1791172D00B77711 /* DODroplet.m */; };
+		162423BD1791172D00B77711 /* DODroplet.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423BB1791172D00B77711 /* DODroplet.m */; };
+		162423C01791178D00B77711 /* DORegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423BF1791178D00B77711 /* DORegion.m */; };
+		162423C11791178D00B77711 /* DORegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423BF1791178D00B77711 /* DORegion.m */; };
+		162423C4179117C100B77711 /* DOImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423C3179117C100B77711 /* DOImage.m */; };
+		162423C5179117C100B77711 /* DOImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423C3179117C100B77711 /* DOImage.m */; };
+		165ACB5917D429040004B5D5 /* ARActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 165ACB5817D429040004B5D5 /* ARActivityView.m */; };
+		1667322017D3AFDE00B125D7 /* ARError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667321A17D3AFDE00B125D7 /* ARError.m */; };
+		1667322117D3AFDE00B125D7 /* ARErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667321C17D3AFDE00B125D7 /* ARErrorDomain.m */; };
+		1667322217D3AFDE00B125D7 /* ARModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667321E17D3AFDE00B125D7 /* ARModelObject.m */; };
+		1667322717D3D2F900B125D7 /* DropletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667322517D3D2F900B125D7 /* DropletViewController.m */; };
+		1667322817D3D2F900B125D7 /* DropletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1667322617D3D2F900B125D7 /* DropletViewController.xib */; };
+		1667322B17D3D89F00B125D7 /* DODropletAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667322A17D3D89F00B125D7 /* DODropletAction.m */; };
+		16C65FE11794C85E0065DD0D /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C65FE01794C85E0065DD0D /* CircleView.m */; };
+		16C65FE21794C85E0065DD0D /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C65FE01794C85E0065DD0D /* CircleView.m */; };
+		16DF7CC91793A3F300993D35 /* DropletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DF7CC81793A3F300993D35 /* DropletView.m */; };
+		16DF7CCA1793A3F300993D35 /* DropletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DF7CC81793A3F300993D35 /* DropletView.m */; };
+		16DF7CCD1793A49900993D35 /* DropletViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DF7CCC1793A49900993D35 /* DropletViewCell.m */; };
+		16DF7CCE1793A49900993D35 /* DropletViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DF7CCC1793A49900993D35 /* DropletViewCell.m */; };
+		C0A0F1E60B4B43B8B0B86811 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C753B515C54A2F828FBCC3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +68,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		162423801791128E00B77711 /* DigitalOcean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalOcean.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		162322761791DCD700EE05EF /* DOSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSize.h; sourceTree = "<group>"; };
+		162322771791DCD700EE05EF /* DOSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSize.m; sourceTree = "<group>"; };
+		1623227A1791E9A900EE05EF /* DigitalOcean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalOcean.h; sourceTree = "<group>"; };
+		1623227B1791F2D300EE05EF /* DOData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOData.h; sourceTree = "<group>"; };
+		1623227C1791F2D300EE05EF /* DOData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOData.m; sourceTree = "<group>"; };
+		1623227F1791F91E00EE05EF /* NSArray+DigitalOcean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DigitalOcean.h"; sourceTree = "<group>"; };
+		162322801791F91E00EE05EF /* NSArray+DigitalOcean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DigitalOcean.m"; sourceTree = "<group>"; };
+		162322841791FD8500EE05EF /* DOObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOObject.h; sourceTree = "<group>"; };
+		162322851791FD8500EE05EF /* DOObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOObject.m; sourceTree = "<group>"; };
+		1623228817920F2600EE05EF /* UIColor+DigitalOcean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DigitalOcean.h"; sourceTree = "<group>"; };
+		1623228917920F2600EE05EF /* UIColor+DigitalOcean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DigitalOcean.m"; sourceTree = "<group>"; };
+		1623228D1792124900EE05EF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1623228E1792124900EE05EF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1623228F1792124900EE05EF /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		162423801791128E00B77711 /* Digital Ocean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digital Ocean.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		162423831791128E00B77711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		162423851791128E00B77711 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		162423871791128E00B77711 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -48,6 +98,36 @@
 		162423A41791128E00B77711 /* DigitalOceanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DigitalOceanTests-Info.plist"; sourceTree = "<group>"; };
 		162423A61791128E00B77711 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		162423A81791128E00B77711 /* DigitalOceanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigitalOceanTests.m; sourceTree = "<group>"; };
+		162423B3179114A400B77711 /* DOAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOAPIClient.h; sourceTree = "<group>"; };
+		162423B4179114A400B77711 /* DOAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOAPIClient.m; sourceTree = "<group>"; };
+		162423B81791156B00B77711 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		162423BA1791172D00B77711 /* DODroplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DODroplet.h; sourceTree = "<group>"; };
+		162423BB1791172D00B77711 /* DODroplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DODroplet.m; sourceTree = "<group>"; };
+		162423BE1791178D00B77711 /* DORegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DORegion.h; sourceTree = "<group>"; };
+		162423BF1791178D00B77711 /* DORegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DORegion.m; sourceTree = "<group>"; };
+		162423C2179117C100B77711 /* DOImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOImage.h; sourceTree = "<group>"; };
+		162423C3179117C100B77711 /* DOImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOImage.m; sourceTree = "<group>"; };
+		165ACB5717D429040004B5D5 /* ARActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARActivityView.h; sourceTree = "<group>"; };
+		165ACB5817D429040004B5D5 /* ARActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARActivityView.m; sourceTree = "<group>"; };
+		1667321917D3AFDE00B125D7 /* ARError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARError.h; sourceTree = "<group>"; };
+		1667321A17D3AFDE00B125D7 /* ARError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARError.m; sourceTree = "<group>"; };
+		1667321B17D3AFDE00B125D7 /* ARErrorDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARErrorDomain.h; sourceTree = "<group>"; };
+		1667321C17D3AFDE00B125D7 /* ARErrorDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARErrorDomain.m; sourceTree = "<group>"; };
+		1667321D17D3AFDE00B125D7 /* ARModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARModelObject.h; sourceTree = "<group>"; };
+		1667321E17D3AFDE00B125D7 /* ARModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARModelObject.m; sourceTree = "<group>"; };
+		1667322417D3D2F900B125D7 /* DropletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropletViewController.h; sourceTree = "<group>"; };
+		1667322517D3D2F900B125D7 /* DropletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletViewController.m; sourceTree = "<group>"; };
+		1667322617D3D2F900B125D7 /* DropletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropletViewController.xib; sourceTree = "<group>"; };
+		1667322917D3D89F00B125D7 /* DODropletAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DODropletAction.h; sourceTree = "<group>"; };
+		1667322A17D3D89F00B125D7 /* DODropletAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DODropletAction.m; sourceTree = "<group>"; };
+		16C65FDF1794C85E0065DD0D /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		16C65FE01794C85E0065DD0D /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		16DF7CC71793A3F300993D35 /* DropletView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropletView.h; sourceTree = "<group>"; };
+		16DF7CC81793A3F300993D35 /* DropletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletView.m; sourceTree = "<group>"; };
+		16DF7CCB1793A49900993D35 /* DropletViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropletViewCell.h; sourceTree = "<group>"; };
+		16DF7CCC1793A49900993D35 /* DropletViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletViewCell.m; sourceTree = "<group>"; };
+		65CCEFA2174943BEAA3F2E86 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F4C753B515C54A2F828FBCC3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +138,7 @@
 				162423861791128E00B77711 /* CoreGraphics.framework in Frameworks */,
 				162423881791128E00B77711 /* UIKit.framework in Frameworks */,
 				162423841791128E00B77711 /* Foundation.framework in Frameworks */,
+				C0A0F1E60B4B43B8B0B86811 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +155,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		162322831791F92800EE05EF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				165ACB5717D429040004B5D5 /* ARActivityView.h */,
+				165ACB5817D429040004B5D5 /* ARActivityView.m */,
+				1623227F1791F91E00EE05EF /* NSArray+DigitalOcean.h */,
+				162322801791F91E00EE05EF /* NSArray+DigitalOcean.m */,
+				1623228817920F2600EE05EF /* UIColor+DigitalOcean.h */,
+				1623228917920F2600EE05EF /* UIColor+DigitalOcean.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		1623228C1792118600EE05EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1623228D1792124900EE05EF /* MainViewController.h */,
+				1623228E1792124900EE05EF /* MainViewController.m */,
+				1667322417D3D2F900B125D7 /* DropletViewController.h */,
+				1667322517D3D2F900B125D7 /* DropletViewController.m */,
+				162322941792127800EE05EF /* Interface */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		162322941792127800EE05EF /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				1667322617D3D2F900B125D7 /* DropletViewController.xib */,
+				1623228F1792124900EE05EF /* MainViewController.xib */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
 		162423771791128E00B77711 = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +196,14 @@
 				162423A21791128E00B77711 /* DigitalOceanTests */,
 				162423821791128E00B77711 /* Frameworks */,
 				162423811791128E00B77711 /* Products */,
+				65CCEFA2174943BEAA3F2E86 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		162423811791128E00B77711 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				162423801791128E00B77711 /* DigitalOcean.app */,
+				162423801791128E00B77711 /* Digital Ocean.app */,
 				1624239B1791128E00B77711 /* DigitalOceanTests.xctest */,
 			);
 			name = Products;
@@ -100,6 +216,7 @@
 				162423851791128E00B77711 /* CoreGraphics.framework */,
 				162423871791128E00B77711 /* UIKit.framework */,
 				1624239C1791128E00B77711 /* XCTest.framework */,
+				F4C753B515C54A2F828FBCC3 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,8 +224,13 @@
 		162423891791128E00B77711 /* DigitalOcean */ = {
 			isa = PBXGroup;
 			children = (
-				162423921791128E00B77711 /* AppDelegate.h */,
-				162423931791128E00B77711 /* AppDelegate.m */,
+				162423B71791154E00B77711 /* Constants */,
+				162423B21791141900B77711 /* Singletons */,
+				162423B9179116C300B77711 /* Model + Data */,
+				1623228C1792118600EE05EF /* Controller */,
+				16DF7CC61793A39B00993D35 /* Views */,
+				162322831791F92800EE05EF /* Helpers */,
+				1667322317D3B3C300B125D7 /* Error */,
 				162423951791128E00B77711 /* Images.xcassets */,
 				1624238A1791128E00B77711 /* Supporting Files */,
 			);
@@ -144,6 +266,73 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		162423B21791141900B77711 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				162423921791128E00B77711 /* AppDelegate.h */,
+				162423931791128E00B77711 /* AppDelegate.m */,
+				162423B3179114A400B77711 /* DOAPIClient.h */,
+				162423B4179114A400B77711 /* DOAPIClient.m */,
+				1623227B1791F2D300EE05EF /* DOData.h */,
+				1623227C1791F2D300EE05EF /* DOData.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
+		162423B71791154E00B77711 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				162423B81791156B00B77711 /* Constants.h */,
+				1623227A1791E9A900EE05EF /* DigitalOcean.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		162423B9179116C300B77711 /* Model + Data */ = {
+			isa = PBXGroup;
+			children = (
+				1667321D17D3AFDE00B125D7 /* ARModelObject.h */,
+				1667321E17D3AFDE00B125D7 /* ARModelObject.m */,
+				162423BA1791172D00B77711 /* DODroplet.h */,
+				162423BB1791172D00B77711 /* DODroplet.m */,
+				162423BE1791178D00B77711 /* DORegion.h */,
+				162423BF1791178D00B77711 /* DORegion.m */,
+				162423C2179117C100B77711 /* DOImage.h */,
+				162423C3179117C100B77711 /* DOImage.m */,
+				162322761791DCD700EE05EF /* DOSize.h */,
+				162322771791DCD700EE05EF /* DOSize.m */,
+				162322841791FD8500EE05EF /* DOObject.h */,
+				162322851791FD8500EE05EF /* DOObject.m */,
+				1667322917D3D89F00B125D7 /* DODropletAction.h */,
+				1667322A17D3D89F00B125D7 /* DODropletAction.m */,
+			);
+			name = "Model + Data";
+			sourceTree = "<group>";
+		};
+		1667322317D3B3C300B125D7 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				1667321917D3AFDE00B125D7 /* ARError.h */,
+				1667321A17D3AFDE00B125D7 /* ARError.m */,
+				1667321B17D3AFDE00B125D7 /* ARErrorDomain.h */,
+				1667321C17D3AFDE00B125D7 /* ARErrorDomain.m */,
+			);
+			name = Error;
+			sourceTree = "<group>";
+		};
+		16DF7CC61793A39B00993D35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				16DF7CC71793A3F300993D35 /* DropletView.h */,
+				16DF7CC81793A3F300993D35 /* DropletView.m */,
+				16DF7CCB1793A49900993D35 /* DropletViewCell.h */,
+				16DF7CCC1793A49900993D35 /* DropletViewCell.m */,
+				16C65FDF1794C85E0065DD0D /* CircleView.h */,
+				16C65FE01794C85E0065DD0D /* CircleView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +340,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 162423AC1791128E00B77711 /* Build configuration list for PBXNativeTarget "DigitalOcean" */;
 			buildPhases = (
+				147388373BBA4F09A9D9BFD9 /* Check Pods Manifest.lock */,
 				1624237C1791128E00B77711 /* Sources */,
 				1624237D1791128E00B77711 /* Frameworks */,
 				1624237E1791128E00B77711 /* Resources */,
+				3CF2003ACE3B4411A73C404F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,7 +352,7 @@
 			);
 			name = DigitalOcean;
 			productName = DigitalOcean;
-			productReference = 162423801791128E00B77711 /* DigitalOcean.app */;
+			productReference = 162423801791128E00B77711 /* Digital Ocean.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1624239A1791128E00B77711 /* DigitalOceanTests */ = {
@@ -191,6 +382,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Axel Rivera";
 				TargetAttributes = {
+					1624237F1791128E00B77711 = {
+						DevelopmentTeam = C2Q5BUZ3MX;
+					};
 					1624239A1791128E00B77711 = {
 						TestTargetID = 1624237F1791128E00B77711;
 					};
@@ -220,7 +414,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1624238E1791128E00B77711 /* InfoPlist.strings in Resources */,
+				162322921792124900EE05EF /* MainViewController.xib in Resources */,
 				162423961791128E00B77711 /* Images.xcassets in Resources */,
+				1667322817D3D2F900B125D7 /* DropletViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,18 +425,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				162423A71791128E00B77711 /* InfoPlist.strings in Resources */,
+				162322931792124900EE05EF /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		147388373BBA4F09A9D9BFD9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3CF2003ACE3B4411A73C404F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1624237C1791128E00B77711 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1623227D1791F2D300EE05EF /* DOData.m in Sources */,
+				162322781791DCD700EE05EF /* DOSize.m in Sources */,
+				16C65FE11794C85E0065DD0D /* CircleView.m in Sources */,
+				162423C4179117C100B77711 /* DOImage.m in Sources */,
+				165ACB5917D429040004B5D5 /* ARActivityView.m in Sources */,
+				162322861791FD8500EE05EF /* DOObject.m in Sources */,
+				162322811791F91E00EE05EF /* NSArray+DigitalOcean.m in Sources */,
+				16DF7CC91793A3F300993D35 /* DropletView.m in Sources */,
+				1667322717D3D2F900B125D7 /* DropletViewController.m in Sources */,
 				162423941791128E00B77711 /* AppDelegate.m in Sources */,
+				1667322017D3AFDE00B125D7 /* ARError.m in Sources */,
 				162423901791128E00B77711 /* main.m in Sources */,
+				1667322B17D3D89F00B125D7 /* DODropletAction.m in Sources */,
+				162322901792124900EE05EF /* MainViewController.m in Sources */,
+				162423C01791178D00B77711 /* DORegion.m in Sources */,
+				162423BC1791172D00B77711 /* DODroplet.m in Sources */,
+				1667322217D3AFDE00B125D7 /* ARModelObject.m in Sources */,
+				16DF7CCD1793A49900993D35 /* DropletViewCell.m in Sources */,
+				1667322117D3AFDE00B125D7 /* ARErrorDomain.m in Sources */,
+				1623228A17920F2600EE05EF /* UIColor+DigitalOcean.m in Sources */,
+				162423B5179114A400B77711 /* DOAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +497,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				162322911792124900EE05EF /* MainViewController.m in Sources */,
+				16DF7CCA1793A3F300993D35 /* DropletView.m in Sources */,
+				162423B6179114A400B77711 /* DOAPIClient.m in Sources */,
+				1623228B17920F2600EE05EF /* UIColor+DigitalOcean.m in Sources */,
+				16DF7CCE1793A49900993D35 /* DropletViewCell.m in Sources */,
+				162423C5179117C100B77711 /* DOImage.m in Sources */,
 				162423A91791128E00B77711 /* DigitalOceanTests.m in Sources */,
+				1623227E1791F2D300EE05EF /* DOData.m in Sources */,
+				162322821791F91E00EE05EF /* NSArray+DigitalOcean.m in Sources */,
+				16C65FE21794C85E0065DD0D /* CircleView.m in Sources */,
+				162423BD1791172D00B77711 /* DODroplet.m in Sources */,
+				162423C11791178D00B77711 /* DORegion.m in Sources */,
+				162322871791FD8500EE05EF /* DOObject.m in Sources */,
+				162322791791DCD700EE05EF /* DOSize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +560,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -315,6 +577,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "9886F3D8-9FFF-450D-A238-70B8DBFDC062";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -335,6 +598,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -352,26 +616,32 @@
 		};
 		162423AD1791128E00B77711 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65CCEFA2174943BEAA3F2E86 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DigitalOcean/DigitalOcean-Prefix.pch";
 				INFOPLIST_FILE = "DigitalOcean/DigitalOcean-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Digital Ocean";
+				PROVISIONING_PROFILE = "9886F3D8-9FFF-450D-A238-70B8DBFDC062";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		162423AE1791128E00B77711 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65CCEFA2174943BEAA3F2E86 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DigitalOcean/DigitalOcean-Prefix.pch";
 				INFOPLIST_FILE = "DigitalOcean/DigitalOcean-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Digital Ocean";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -435,6 +705,7 @@
 				162423AE1791128E00B77711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		162423AF1791128E00B77711 /* Build configuration list for PBXNativeTarget "DigitalOceanTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +714,7 @@
 				162423B11791128E00B77711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
