@@ -1,12 +1,12 @@
 //
-//  DOAPIClient.m
+//  DigitalOceanAPIClient.m
 //  DigitalOcean
 //
 //  Created by Axel Rivera on 7/13/13.
 //  Copyright (c) 2013 Axel Rivera. All rights reserved.
 //
 
-#import "DOAPIClient.h"
+#import "DigitalOceanAPIClient.h"
 
 #import <AFJSONRequestOperation.h>
 #import <AFNetworkActivityIndicatorManager.h>
@@ -16,7 +16,7 @@
 #define kHTTPPut @"PUT"
 #define kHTTPDelete @"DELETE"
 
-@interface DOAPIClient ()
+@interface DigitalOceanAPIClient ()
 
 - (NSMutableDictionary *)authDictionary;
 
@@ -31,7 +31,7 @@
 
 @end
 
-@implementation DOAPIClient
+@implementation DigitalOceanAPIClient
 
 - (id)initWithBaseURL:(NSURL *)URL
 {
@@ -107,6 +107,26 @@
                                             objectClass:NSStringFromClass([DODroplet class])];
         if (completion) {
             completion(droplets, nil);
+        }
+    }];
+}
+
+- (void)fetchDropletWithID:(NSInteger)dropletID completion:(DODropletCompletionBlock)completion
+{
+    NSString *path = [NSString stringWithFormat:@"droplets/%d", dropletID];
+    [self getAuthPath:path parameters:nil completion:^(id object, NSError *error) {
+        if (error) {
+            if (completion) {
+                completion(nil, error);
+            }
+            return;
+        }
+
+        DODroplet *droplet = [object extractObjectForKey:@"droplet"
+                                             objectClass:NSStringFromClass([DODroplet class])];
+
+        if (completion) {
+            completion(droplet, nil);
         }
     }];
 }
@@ -235,7 +255,9 @@
                 return;
             }
         } else {
-            if (!IsEmpty(status) && wait) {
+            if (wait) {
+                DLog(@"Wait before calling event!");
+                [NSThread sleepForTimeInterval:2.0];
                 [self validateEventWithID:eventID wait:wait completion:completion];
             } else {
                 if (completion) {
@@ -252,7 +274,7 @@
 #ifdef kDigitalOceanTestClientID
     string = kDigitalOceanTestClientID;
 #else
-    string = @"kGKyn6OyznKG2mtxijQih";
+    string = [[MaritimoAPIClient sharedClient] clientID];
 #endif
     return string;;
 }
@@ -263,7 +285,7 @@
 #ifdef kDigitalOceanTestApiKey
     string = kDigitalOceanTestApiKey;
 #else
-    string = @"TsU8eI7Ss5bdBMmH8RP1zRQfautlrxAwNYZRFZHSr";
+    string = [[MaritimoAPIClient sharedClient] APIKey];
 #endif
     return string;
 }
@@ -275,14 +297,14 @@
 
 #pragma mark - Singleton Methods
 
-+ (DOAPIClient *)sharedClient
++ (DigitalOceanAPIClient *)sharedClient
 {
-    static DOAPIClient *sharedClient = nil;
+    static DigitalOceanAPIClient *sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSString *URLStr = kDigitalOceanHost;
 		DLog(@"Init Digital Ocean API Client: %@", URLStr);
-        sharedClient = [[DOAPIClient alloc] initWithBaseURL:[NSURL URLWithString:URLStr]];
+        sharedClient = [[DigitalOceanAPIClient alloc] initWithBaseURL:[NSURL URLWithString:URLStr]];
     });
     return sharedClient;
 }

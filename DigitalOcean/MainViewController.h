@@ -14,4 +14,6 @@
 
 @property (strong, nonatomic) NSArray *dataSource;
 
+- (void)reloadDroplets;
+
 @end

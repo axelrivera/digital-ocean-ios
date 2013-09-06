@@ -13,6 +13,8 @@
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) UITableViewController *tableViewController;
+
 @end
 
 @implementation MainViewController
@@ -31,13 +33,40 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-                                                                                          target:self
-                                                                                          action:@selector(reloadAction:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout"
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(logoutAction:)];
     
     self.tableView.rowHeight = [DropletView dropletViewHeight] + 20.0;
-    
-    [self reloadAction:nil];
+
+    self.tableViewController = [[UITableViewController alloc]initWithStyle:UITableViewStylePlain];
+    [self addChildViewController:self.tableViewController];
+
+    self.tableViewController.refreshControl = [[UIRefreshControl alloc] init];
+
+    [self.tableViewController.refreshControl addTarget:self
+                                                action:@selector(reloadAction:)
+                                      forControlEvents:UIControlEventValueChanged];
+
+    self.tableViewController.tableView = self.tableView;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(dropletsUpdated:)
+                                                 name:DODropletsUpdatedNotification
+                                               object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.title = @"Digital Ocean";
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.title = @"Back";
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,14 +75,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DODropletsUpdatedNotification object:nil];
+}
+
+#pragma mark - Public Methods
+
+- (void)reloadDroplets
+{
+    [self reloadAction:nil];
+}
+
 #pragma mark - Selector Methods
+
+- (void)logoutAction:(id)sender
+{
+    [[MaritimoAPIClient sharedClient] logout];
+}
 
 - (void)reloadAction:(id)sender
 {
     [[DOData sharedData] reloadInitialDataWithCompletion:^{
         self.dataSource = [DOData sharedData].droplets;
         [self.tableView reloadData];
+        if ([sender isKindOfClass:[UIRefreshControl class]]) {
+            [sender endRefreshing];
+        }
     }];
+}
+
+- (void)dropletsUpdated:(NSNotification *)notification
+{
+    NSArray *droplets = notification.userInfo[kUserInfoDropletsKey];
+    if (droplets) {
+        self.dataSource = droplets;
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - UITableViewDataSource Methods

@@ -1,5 +1,5 @@
 //
-//  DOAPIClient.h
+//  DigitalOceanAPIClient.h
 //  DigitalOcean
 //
 //  Created by Axel Rivera on 7/13/13.
@@ -15,15 +15,14 @@ typedef void(^DOImagesCompletionBlock)(NSArray *images, NSError *error);
 typedef void(^DORegionsCompletionBlock)(NSArray *regions, NSError *error);
 typedef void(^DOSizesCompletionBlock)(NSArray *sizes, NSError *error);
 
-typedef void(^DOConfirmationBlock)(BOOL success, NSError *error);
-typedef void(^DOCompletionBlock)(id object, NSError *error);
-typedef void(^DOErrorBlock)(NSError *error);
+typedef void(^DODropletCompletionBlock)(DODroplet *droplet, NSError *error);
 
-@interface DOAPIClient : AFHTTPClient
+@interface DigitalOceanAPIClient : AFHTTPClient
 
-+ (DOAPIClient *)sharedClient;
++ (DigitalOceanAPIClient *)sharedClient;
 
 - (void)fetchDropletsWithCompletion:(DODropletsCompletionBlock)completion;
+- (void)fetchDropletWithID:(NSInteger)dropletID completion:(DODropletCompletionBlock)completion;
 
 - (void)dropletAction:(DODropletActionType)dropletAction
             dropletID:(NSInteger)dropletID

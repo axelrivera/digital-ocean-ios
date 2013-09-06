@@ -16,7 +16,7 @@
 {
     self = [super init];
     if (self) {
-        _droplets = @[];
+        _droplets = [@[] mutableCopy];
         _images = @{};
         _regions = @{};
         _sizes = @{};
@@ -41,11 +41,11 @@
 
 - (void)reloadDropletsWithCompletion:(DODropletsCompletionBlock)completion
 {
-    [[DOAPIClient sharedClient] fetchDropletsWithCompletion:^(NSArray *droplets, NSError *error) {
+    [[DigitalOceanAPIClient sharedClient] fetchDropletsWithCompletion:^(NSArray *droplets, NSError *error) {
         if (droplets) {
-            self.droplets = droplets;
+            self.droplets = [droplets mutableCopy];
         } else {
-            self.droplets = @[];
+            self.droplets = [@[] mutableCopy];
         }
 
         if (completion) {
@@ -54,9 +54,33 @@
     }];
 }
 
+- (void)reloadDropletWithID:(NSInteger)dropletID completion:(DODropletCompletionBlock)completion
+{
+    [[DigitalOceanAPIClient sharedClient] fetchDropletWithID:dropletID completion:^(DODroplet *droplet, NSError *error) {
+        if (error) {
+            if (completion) {
+                completion(nil, completion);
+            }
+            return;
+        }
+        
+        NSInteger index = [self.droplets indexOfObject:droplet];
+        if (index != NSNotFound) {
+            [self.droplets replaceObjectAtIndex:index withObject:droplet];
+            [[NSNotificationCenter defaultCenter] postNotificationName:DODropletsUpdatedNotification
+                                                                object:nil
+                                                              userInfo:@{ kUserInfoDropletsKey: self.droplets }];
+        }
+
+        if (completion) {
+            completion(droplet, nil);
+        }
+    }];
+}
+
 - (void)reloadImagesWithCompletion:(DOImagesCompletionBlock)completion
 {
-    [[DOAPIClient sharedClient] fetchImagesWithCompletion:^(NSArray *images, NSError *error) {
+    [[DigitalOceanAPIClient sharedClient] fetchImagesWithCompletion:^(NSArray *images, NSError *error) {
         if (images) {
             self.images = [images dictionaryWithIDKey];
         } else {
@@ -71,7 +95,7 @@
 
 - (void)reloadRegionsWithCompletion:(DORegionsCompletionBlock)completion
 {
-    [[DOAPIClient sharedClient] fetchRegionsWithCompletion:^(NSArray *regions, NSError *error) {
+    [[DigitalOceanAPIClient sharedClient] fetchRegionsWithCompletion:^(NSArray *regions, NSError *error) {
         if (regions) {
             self.regions = [regions dictionaryWithIDKey];
         } else {
@@ -86,7 +110,7 @@
 
 - (void)reloadSizesWithCompletion:(DOSizesCompletionBlock)completion
 {
-    [[DOAPIClient sharedClient] fetchSizesWithCompletion:^(NSArray *sizes, NSError *error) {
+    [[DigitalOceanAPIClient sharedClient] fetchSizesWithCompletion:^(NSArray *sizes, NSError *error) {
         if (sizes) {
             self.sizes = [sizes dictionaryWithIDKey];
         } else {

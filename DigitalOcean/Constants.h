@@ -6,15 +6,25 @@
 //  Copyright (c) 2013 Axel Rivera. All rights reserved.
 //
 
-//#define kDigitalOceanHost @"https://api.digitalocean.com/"
-#define kDigitalOceanHost @"https://ocean-sharingan.fwd.wf/"
+#define kMaritimoHost @"https://maritimo.herokuapp.com"
 
-#define kDigitalOceanTestClientID @"web-client"
-#define kDigitalOceanTestApiKey @"12345"
+#define kDigitalOceanHost @"https://api.digitalocean.com"
+//#define kDigitalOceanHost @"https://ocean-sharingan.fwd.wf/"
+
+//#define kDigitalOceanTestClientID @"web-client"
+//#define kDigitalOceanTestApiKey @"12345"
 
 // Notifications
 
 #define DOInitialDataReloadedNotification @"DigitalOceanInitialDataNotification"
+#define DODropletsUpdatedNotification @"DigitalOceanDropletsUpdatedNotification"
+#define DOUserDidLoginNotification @"DigitalOceanUserDidLoginNotification"
+#define DOUserDidLogoutNotification @"DigitalOceanUserDidLogoutNotification"
+
+#define kDigitalOceanClientIDKey @"DigitalOceanClientIDKey"
+#define kDigitalOceanAPIKeyKey @"DigitalOceanAPIKeyKey"
+
+#define kUserInfoDropletsKey @"droplets"
 
 #define NSStringFromBOOL(value) value ? @"YES" : @"NO"
 

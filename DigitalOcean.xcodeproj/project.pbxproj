@@ -33,8 +33,8 @@
 		1624239F1791128E00B77711 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162423871791128E00B77711 /* UIKit.framework */; };
 		162423A71791128E00B77711 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 162423A51791128E00B77711 /* InfoPlist.strings */; };
 		162423A91791128E00B77711 /* DigitalOceanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423A81791128E00B77711 /* DigitalOceanTests.m */; };
-		162423B5179114A400B77711 /* DOAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423B4179114A400B77711 /* DOAPIClient.m */; };
-		162423B6179114A400B77711 /* DOAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423B4179114A400B77711 /* DOAPIClient.m */; };
+		162423B5179114A400B77711 /* DigitalOceanAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423B4179114A400B77711 /* DigitalOceanAPIClient.m */; };
+		162423B6179114A400B77711 /* DigitalOceanAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423B4179114A400B77711 /* DigitalOceanAPIClient.m */; };
 		162423BC1791172D00B77711 /* DODroplet.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423BB1791172D00B77711 /* DODroplet.m */; };
 		162423BD1791172D00B77711 /* DODroplet.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423BB1791172D00B77711 /* DODroplet.m */; };
 		162423C01791178D00B77711 /* DORegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423BF1791178D00B77711 /* DORegion.m */; };
@@ -54,6 +54,9 @@
 		16DF7CCA1793A3F300993D35 /* DropletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DF7CC81793A3F300993D35 /* DropletView.m */; };
 		16DF7CCD1793A49900993D35 /* DropletViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DF7CCC1793A49900993D35 /* DropletViewCell.m */; };
 		16DF7CCE1793A49900993D35 /* DropletViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DF7CCC1793A49900993D35 /* DropletViewCell.m */; };
+		16EB74C817D9572900A80D81 /* MaritimoAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB74C717D9572900A80D81 /* MaritimoAPIClient.m */; };
+		16EB74CC17D95E1200A80D81 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB74CA17D95E1200A80D81 /* LoginViewController.m */; };
+		16EB74CD17D95E1200A80D81 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16EB74CB17D95E1200A80D81 /* LoginViewController.xib */; };
 		C0A0F1E60B4B43B8B0B86811 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C753B515C54A2F828FBCC3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -98,8 +101,8 @@
 		162423A41791128E00B77711 /* DigitalOceanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DigitalOceanTests-Info.plist"; sourceTree = "<group>"; };
 		162423A61791128E00B77711 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		162423A81791128E00B77711 /* DigitalOceanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigitalOceanTests.m; sourceTree = "<group>"; };
-		162423B3179114A400B77711 /* DOAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOAPIClient.h; sourceTree = "<group>"; };
-		162423B4179114A400B77711 /* DOAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOAPIClient.m; sourceTree = "<group>"; };
+		162423B3179114A400B77711 /* DigitalOceanAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalOceanAPIClient.h; sourceTree = "<group>"; };
+		162423B4179114A400B77711 /* DigitalOceanAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DigitalOceanAPIClient.m; sourceTree = "<group>"; };
 		162423B81791156B00B77711 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		162423BA1791172D00B77711 /* DODroplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DODroplet.h; sourceTree = "<group>"; };
 		162423BB1791172D00B77711 /* DODroplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DODroplet.m; sourceTree = "<group>"; };
@@ -126,6 +129,11 @@
 		16DF7CC81793A3F300993D35 /* DropletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletView.m; sourceTree = "<group>"; };
 		16DF7CCB1793A49900993D35 /* DropletViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropletViewCell.h; sourceTree = "<group>"; };
 		16DF7CCC1793A49900993D35 /* DropletViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletViewCell.m; sourceTree = "<group>"; };
+		16EB74C617D9572900A80D81 /* MaritimoAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaritimoAPIClient.h; sourceTree = "<group>"; };
+		16EB74C717D9572900A80D81 /* MaritimoAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaritimoAPIClient.m; sourceTree = "<group>"; };
+		16EB74C917D95E1200A80D81 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		16EB74CA17D95E1200A80D81 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		16EB74CB17D95E1200A80D81 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		65CCEFA2174943BEAA3F2E86 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F4C753B515C54A2F828FBCC3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,7 +183,8 @@
 				1623228E1792124900EE05EF /* MainViewController.m */,
 				1667322417D3D2F900B125D7 /* DropletViewController.h */,
 				1667322517D3D2F900B125D7 /* DropletViewController.m */,
-				162322941792127800EE05EF /* Interface */,
+				16EB74C917D95E1200A80D81 /* LoginViewController.h */,
+				16EB74CA17D95E1200A80D81 /* LoginViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -183,6 +192,7 @@
 		162322941792127800EE05EF /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				16EB74CB17D95E1200A80D81 /* LoginViewController.xib */,
 				1667322617D3D2F900B125D7 /* DropletViewController.xib */,
 				1623228F1792124900EE05EF /* MainViewController.xib */,
 			);
@@ -228,6 +238,7 @@
 				162423B21791141900B77711 /* Singletons */,
 				162423B9179116C300B77711 /* Model + Data */,
 				1623228C1792118600EE05EF /* Controller */,
+				162322941792127800EE05EF /* Interface */,
 				16DF7CC61793A39B00993D35 /* Views */,
 				162322831791F92800EE05EF /* Helpers */,
 				1667322317D3B3C300B125D7 /* Error */,
@@ -271,10 +282,12 @@
 			children = (
 				162423921791128E00B77711 /* AppDelegate.h */,
 				162423931791128E00B77711 /* AppDelegate.m */,
-				162423B3179114A400B77711 /* DOAPIClient.h */,
-				162423B4179114A400B77711 /* DOAPIClient.m */,
+				162423B3179114A400B77711 /* DigitalOceanAPIClient.h */,
+				162423B4179114A400B77711 /* DigitalOceanAPIClient.m */,
 				1623227B1791F2D300EE05EF /* DOData.h */,
 				1623227C1791F2D300EE05EF /* DOData.m */,
+				16EB74C617D9572900A80D81 /* MaritimoAPIClient.h */,
+				16EB74C717D9572900A80D81 /* MaritimoAPIClient.m */,
 			);
 			name = Singletons;
 			sourceTree = "<group>";
@@ -413,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16EB74CD17D95E1200A80D81 /* LoginViewController.xib in Resources */,
 				1624238E1791128E00B77711 /* InfoPlist.strings in Resources */,
 				162322921792124900EE05EF /* MainViewController.xib in Resources */,
 				162423961791128E00B77711 /* Images.xcassets in Resources */,
@@ -470,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1623227D1791F2D300EE05EF /* DOData.m in Sources */,
+				16EB74CC17D95E1200A80D81 /* LoginViewController.m in Sources */,
 				162322781791DCD700EE05EF /* DOSize.m in Sources */,
 				16C65FE11794C85E0065DD0D /* CircleView.m in Sources */,
 				162423C4179117C100B77711 /* DOImage.m in Sources */,
@@ -489,7 +504,8 @@
 				16DF7CCD1793A49900993D35 /* DropletViewCell.m in Sources */,
 				1667322117D3AFDE00B125D7 /* ARErrorDomain.m in Sources */,
 				1623228A17920F2600EE05EF /* UIColor+DigitalOcean.m in Sources */,
-				162423B5179114A400B77711 /* DOAPIClient.m in Sources */,
+				162423B5179114A400B77711 /* DigitalOceanAPIClient.m in Sources */,
+				16EB74C817D9572900A80D81 /* MaritimoAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +515,7 @@
 			files = (
 				162322911792124900EE05EF /* MainViewController.m in Sources */,
 				16DF7CCA1793A3F300993D35 /* DropletView.m in Sources */,
-				162423B6179114A400B77711 /* DOAPIClient.m in Sources */,
+				162423B6179114A400B77711 /* DigitalOceanAPIClient.m in Sources */,
 				1623228B17920F2600EE05EF /* UIColor+DigitalOcean.m in Sources */,
 				16DF7CCE1793A49900993D35 /* DropletViewCell.m in Sources */,
 				162423C5179117C100B77711 /* DOImage.m in Sources */,
@@ -625,6 +641,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DigitalOcean/DigitalOcean-Prefix.pch";
 				INFOPLIST_FILE = "DigitalOcean/DigitalOcean-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "Digital Ocean";
 				PROVISIONING_PROFILE = "9886F3D8-9FFF-450D-A238-70B8DBFDC062";
 				WRAPPER_EXTENSION = app;
@@ -641,6 +658,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DigitalOcean/DigitalOcean-Prefix.pch";
 				INFOPLIST_FILE = "DigitalOcean/DigitalOcean-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "Digital Ocean";
 				WRAPPER_EXTENSION = app;
 			};

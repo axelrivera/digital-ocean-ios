@@ -56,7 +56,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [[DOAPIClient sharedClient].operationQueue cancelAllOperations];
+    [[DigitalOceanAPIClient sharedClient].operationQueue cancelAllOperations];
 }
 
 #pragma mark UITableViewDataSource Methods
@@ -99,8 +99,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     DODropletAction *action = self.dataSource[indexPath.row];
-    
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:[action name]
+
+    NSString *titleStr = [NSString stringWithFormat:@"Are you sure you want to %@ %@?", [action name], self.droplet.name];
+
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:titleStr
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
                                                destructiveButtonTitle:nil
@@ -122,14 +124,26 @@
         [self.activityView setTitle:[DODropletAction titleForActionType:actionSheet.tag] indicator:YES];
         [self.activityView showAnimated:YES];
         
-        [[DOAPIClient sharedClient] dropletAction:actionSheet.tag
+        [[DigitalOceanAPIClient sharedClient] dropletAction:actionSheet.tag
                                         dropletID:self.droplet.objectID
                                        checkEvent:YES
                                              wait:YES
                                        completion:^(BOOL success, NSError *error)
          {
-             [self.activityView hideAnimated:YES];
-             DLog(@"Succedded: %@, Error: %@", NSStringFromBOOL(success), error);
+             if (success) {
+                 [[DOData sharedData] reloadDropletWithID:self.droplet.objectID
+                                               completion:^(DODroplet *droplet, NSError *error)
+                  {
+                      [self.activityView hideAnimated:YES];
+                      if (droplet) {
+                          self.droplet = droplet;
+                          self.dataSource = [droplet availableActions];
+                          [self.tableView reloadData];
+                      }
+                  }];
+             } else {
+                 [self.activityView hideAnimated:YES];
+             }
          }];
     }
 }
