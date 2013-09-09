@@ -29,5 +29,6 @@
 - (NSString *)regionNameForIDString:(NSString *)string;
 - (NSString *)imageNameForIDString:(NSString *)string;
 - (NSString *)sizeNameForIDString:(NSString *)string;
+- (NSString *)diskNameForIDString:(NSString *)string;
 
 @end

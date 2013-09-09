@@ -1,14 +1,14 @@
 //
-//  DOSize.m
+//  DOSnapshot.m
 //  DigitalOcean
 //
-//  Created by Axel Rivera on 7/13/13.
+//  Created by Axel Rivera on 9/8/13.
 //  Copyright (c) 2013 Axel Rivera. All rights reserved.
 //
 
-#import "DOSize.h"
+#import "DOSnapshot.h"
 
-@implementation DOSize
+@implementation DOSnapshot
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
@@ -16,7 +16,7 @@
     if (self) {
         self.objectID = [dictionary[@"id"] integerValue];
         _name = [dictionary[@"name"] copy];
-        _disk = [dictionary[@"disk"] copy];
+        _distribution = [dictionary[@"distribution"] copy];
     }
     return self;
 }

@@ -10,28 +10,6 @@
 
 @implementation DODropletAction
 
-+ (DODropletAction *)actionWithType:(DODropletActionType)actionType
-{
-    DODropletAction *action = [[DODropletAction alloc] init];
-    action.actionType = actionType;
-    return action;
-}
-
-+ (DODropletAction *)bootAction
-{
-    return [DODropletAction actionWithType:DODropletActionTypeBoot];
-}
-
-+ (DODropletAction *)shutdownAction
-{
-    return [DODropletAction actionWithType:DODropletActionTypeShutDown];
-}
-
-+ (DODropletAction *)rebootAction
-{
-    return [DODropletAction actionWithType:DODropletActionTypeReboot];
-}
-
 + (NSString *)titleForActionType:(DODropletActionType)actionType
 {
     NSString *title = nil;
@@ -44,6 +22,18 @@
             break;
         case DODropletActionTypeReboot:
             title = @"Reboot";
+            break;
+        case DODropletActionTypeResetPassword:
+            title = @"Password Reset";
+            break;
+        case DODropletActionTypeTakeSnapshot:
+            title = @"Take Snapshot";
+            break;
+        case DODropletActionTypeEnableBackups:
+            title = @"Enable Backups";
+            break;
+        case DODropletActionTypeDisableBackups:
+            title = @"Disable Backups";
             break;
         default:
             title = @"None";
@@ -65,25 +55,23 @@
         case DODropletActionTypeReboot:
             path = @"reboot";
             break;
+        case DODropletActionTypeResetPassword:
+            path = @"password_reset";
+            break;
+        case DODropletActionTypeTakeSnapshot:
+            path = @"snapshot";
+            break;
+        case DODropletActionTypeEnableBackups:
+            path = @"enable_backups";
+            break;
+        case DODropletActionTypeDisableBackups:
+            path = @"disable_backups";
+            break;
         default:
             path = @"";
             break;
     }
     return path;
-}
-
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        _actionType = DODropletActionTypeNone;
-    }
-    return self;
-}
-
-- (NSString *)name
-{
-    return [[self class] titleForActionType:self.actionType];
 }
 
 @end

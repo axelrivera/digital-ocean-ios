@@ -23,7 +23,7 @@
 {
     self = [super initWithNibName:@"MainViewController" bundle:nil];
     if (self) {
-        self.title = @"Digital Ocean";
+        self.title = @"My Droplets";
         _dataSource = @[];
     }
     return self;
@@ -38,7 +38,7 @@
                                                                              target:self
                                                                              action:@selector(logoutAction:)];
     
-    self.tableView.rowHeight = [DropletView dropletViewHeight] + 20.0;
+    self.tableView.rowHeight = 63.0;
 
     self.tableViewController = [[UITableViewController alloc]initWithStyle:UITableViewStylePlain];
     [self addChildViewController:self.tableViewController];
@@ -60,13 +60,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.title = @"Digital Ocean";
+    //self.title = @"Digital Ocean";
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    self.title = @"Back";
+    //self.title = @"Back";
 }
 
 - (void)didReceiveMemoryWarning
@@ -137,12 +137,11 @@
     
     DODroplet *droplet = self.dataSource[indexPath.row];
 
-    cell.dropletView.statusView.contentColor = [droplet statusColor];
-    cell.dropletView.nameLabel.text = droplet.name;
-    cell.dropletView.ipLabel.text = droplet.ipAddress;
-    cell.dropletView.regionLabel.text = [[DOData sharedData] regionNameForIDString:[droplet regionIDString]];
-    cell.dropletView.distroLabel.text = [[DOData sharedData] imageNameForIDString:[droplet imageIDString]];
-    cell.dropletView.memoryLabel.text = [[DOData sharedData] sizeNameForIDString:[droplet sizeIDString]];
+    cell.nameLabel.text = droplet.name;
+    cell.statusLabel.text = [droplet formattedStatus];
+    cell.statusLabel.textColor = [droplet statusColor];
+    cell.ipLabel.text = droplet.ipAddress;
+    cell.regionLabel.text = [droplet regionName];
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleBlue;

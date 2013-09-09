@@ -10,17 +10,17 @@
 
 @implementation UIColor (DigitalOcean)
 
-+ (UIColor *)DOBlueColor
++ (UIColor *)do_blueColor
 {
     return rgb(43.0, 126.0, 190.0);
 }
 
-+ (UIColor *)DOGreenColor
++ (UIColor *)do_greenColor
 {
     return rgb(75.0, 127.0, 46.0);
 }
 
-+ (UIColor *)DOGrayColor
++ (UIColor *)do_grayColor
 {
     return [UIColor lightGrayColor];
 }

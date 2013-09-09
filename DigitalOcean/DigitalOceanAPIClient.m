@@ -137,6 +137,21 @@
                  wait:(BOOL)wait
            completion:(DOConfirmationBlock)completion
 {
+    [self dropletAction:dropletAction
+              dropletID:dropletID
+                options:nil
+             checkEvent:checkEvent
+                   wait:wait
+             completion:completion];
+}
+
+- (void)dropletAction:(DODropletActionType)dropletAction
+            dropletID:(NSInteger)dropletID
+              options:(NSDictionary *)options
+           checkEvent:(BOOL)checkEvent
+                 wait:(BOOL)wait
+           completion:(DOConfirmationBlock)completion
+{
     if (dropletAction == DODropletActionTypeNone) {
         DLog(@"Droplet Action Cannot be None!!");
         return;
@@ -144,15 +159,23 @@
     
     NSString *path = [NSString stringWithFormat:@"droplets/%d/%@",
                       dropletID, [DODropletAction pathForActionType:dropletAction]];
-
-    [self getAuthPath:path parameters:nil completion:^(id object, NSError *error) {
+    
+    [self getAuthPath:path parameters:options completion:^(id object, NSError *error) {
         if (error) {
             if (completion) {
                 completion(NO, error);
             }
             return;
         }
-
+        
+        NSString *status = [object extractStringValueForKey:@"status"];
+        if (![status isEqualToString:@"OK"]) {
+            if (completion) {
+                completion(NO, [ARError error]);
+            }
+            return;
+        }
+        
         if (checkEvent) {
             NSInteger eventID = [object extractIntegerValueForKey:@"event_id"];
             [self validateEventWithID:eventID wait:wait completion:^(BOOL success, NSError *error) {
@@ -162,7 +185,7 @@
                     }
                     return;
                 }
-
+                
                 if (completion) {
                     completion(success, nil);
                 }

@@ -8,6 +8,10 @@
 
 #import "LoginViewController.h"
 
+#import "UIButton+Color.h"
+
+#import <UIView+AutoLayout.h>
+
 @interface LoginViewController () <UITextFieldDelegate>
 
 @property (assign, nonatomic) BOOL isBusy;
@@ -28,7 +32,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.loginButton = [UIButton solidButtonWithBackgroundColor:[UIColor do_blueColor]];
+    self.loginButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
+
+    [self.loginButton addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.view addSubview:self.loginButton];
+
+    // Setup AutoLayout
+
+    [self.loginButton autoSetDimension:ALDimensionHeight toSize:44.0];
+    [self.loginButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.passwordTextField withOffset:10.0];
+    [self.loginButton autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.passwordTextField];
+    [self.loginButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.passwordTextField];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,7 +57,7 @@
 
 #pragma mark Public Methods
 
-- (IBAction)loginAction:(id)sender
+- (void)loginAction:(id)sender
 {
     [self.view endEditing:YES];
     

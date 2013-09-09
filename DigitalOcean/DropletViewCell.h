@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "DropletView.h"
-
 @interface DropletViewCell : UITableViewCell
 
-@property (strong, nonatomic) DropletView *dropletView;
+@property (strong, nonatomic, readonly) UILabel *nameLabel;
+@property (strong, nonatomic, readonly) UILabel *statusLabel;
+@property (strong, nonatomic, readonly) UILabel *ipLabel;
+@property (strong, nonatomic, readonly) UILabel *regionLabel;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 

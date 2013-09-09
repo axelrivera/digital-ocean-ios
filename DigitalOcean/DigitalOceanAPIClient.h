@@ -30,6 +30,13 @@ typedef void(^DODropletCompletionBlock)(DODroplet *droplet, NSError *error);
                  wait:(BOOL)wait
            completion:(DOConfirmationBlock)completion;
 
+- (void)dropletAction:(DODropletActionType)dropletAction
+            dropletID:(NSInteger)dropletID
+              options:(NSDictionary *)options
+           checkEvent:(BOOL)checkEvent
+                 wait:(BOOL)wait
+           completion:(DOConfirmationBlock)completion;
+
 - (void)fetchImagesWithCompletion:(DOImagesCompletionBlock)completion;
 - (void)fetchRegionsWithCompletion:(DORegionsCompletionBlock)completion;
 - (void)fetchSizesWithCompletion:(DOSizesCompletionBlock)completion;

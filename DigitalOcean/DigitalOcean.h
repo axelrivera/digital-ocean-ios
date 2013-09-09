@@ -19,6 +19,8 @@ typedef void(^DOErrorBlock)(NSError *error);
 #import "DORegion.h"
 #import "DOImage.h"
 #import "DOSize.h"
+#import "DOBackup.h"
+#import "DOSnapshot.h"
 #import "MaritimoAPIClient.h"
 #import "DigitalOceanAPIClient.h"
 #import "DOData.h"

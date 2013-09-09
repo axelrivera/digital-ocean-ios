@@ -8,30 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-#define kDropletActionIdentifierBoot @"boot"
-#define kDropletActionIdentifierShutdown @"shutdown"
-#define kDropletActionIdentifierReboot @"reboot"
-
 typedef NS_ENUM(NSInteger, DODropletActionType) {
-    DODropletActionTypeNone = 0,
+    DODropletActionTypeNone = -1,
     DODropletActionTypeBoot,
     DODropletActionTypeShutDown,
-    DODropletActionTypeReboot
+    DODropletActionTypeReboot,
+    DODropletActionTypeResetPassword,
+    DODropletActionTypeTakeSnapshot,
+    DODropletActionTypeEnableBackups,
+    DODropletActionTypeDisableBackups
 };
 
 @interface DODropletAction : NSObject
 
-@property (assign, nonatomic) DODropletActionType actionType;
-
-+ (DODropletAction *)actionWithType:(DODropletActionType)actionType;
-
-+ (DODropletAction *)bootAction;
-+ (DODropletAction *)shutdownAction;
-+ (DODropletAction *)rebootAction;
-
 + (NSString *)titleForActionType:(DODropletActionType)actionType;
 + (NSString *)pathForActionType:(DODropletActionType)actionType;
-
-- (NSString *)name;
 
 @end

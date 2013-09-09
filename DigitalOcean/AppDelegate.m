@@ -15,10 +15,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UINavigationBar appearance] setTintColor:[UIColor DOBlueColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor do_blueColor]];
+    [[UISegmentedControl appearance] setTintColor:[UIColor do_blueColor]];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor DOBlueColor];
+    self.window.backgroundColor = [UIColor do_blueColor];
 
     self.mainViewController = [[MainViewController alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];

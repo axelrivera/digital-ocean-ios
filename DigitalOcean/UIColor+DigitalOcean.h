@@ -10,8 +10,8 @@
 
 @interface UIColor (DigitalOcean)
 
-+ (UIColor *)DOBlueColor;
-+ (UIColor *)DOGreenColor;
-+ (UIColor *)DOGrayColor;
++ (UIColor *)do_blueColor;
++ (UIColor *)do_greenColor;
++ (UIColor *)do_grayColor;
 
 @end

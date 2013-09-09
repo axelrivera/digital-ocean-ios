@@ -12,11 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+
+@property (strong, nonatomic) UIButton *loginButton;
 
 @property (copy, nonatomic) NSString *emailString;
 @property (copy, nonatomic) NSString *passwordString;
-
-- (IBAction)loginAction:(id)sender;
 
 @end

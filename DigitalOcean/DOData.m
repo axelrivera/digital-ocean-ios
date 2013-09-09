@@ -125,8 +125,8 @@
 
 - (NSString *)regionNameForIDString:(NSString *)string
 {
-    NSString *name = nil;
-     DORegion *region = self.regions[string];
+    NSString *name = @"";
+    DORegion *region = self.regions[string];
     if (region) {
         name = region.name;
     }
@@ -135,10 +135,10 @@
 
 - (NSString *)imageNameForIDString:(NSString *)string
 {
-    NSString *name = nil;
+    NSString *name = @"";
     DOImage *image = self.images[string];
     if (image) {
-        name = [NSString stringWithFormat:@"%@ (%@)", image.name, image.distribution];
+        name = image.name;
     }
         
     return name;
@@ -146,10 +146,20 @@
 
 - (NSString *)sizeNameForIDString:(NSString *)string
 {
-    NSString *name = nil;
+    NSString *name = @"";
     DOSize *size = self.sizes[string];
     if (size) {
-        name = size.name;
+        name = [NSString stringWithFormat:@"%@ Ram", size.name];
+    }
+    return name;
+}
+
+- (NSString *)diskNameForIDString:(NSString *)string
+{
+    NSString *name = @"";
+    DOSize *size = self.sizes[string];
+    if (size) {
+        name = [NSString stringWithFormat:@"%@GB SSD", size.disk];
     }
     return name;
 }
