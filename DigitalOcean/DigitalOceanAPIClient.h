@@ -21,6 +21,8 @@ typedef void(^DODropletCompletionBlock)(DODroplet *droplet, NSError *error);
 
 + (DigitalOceanAPIClient *)sharedClient;
 
+- (void)validateClientID:(NSString *)clientID APIKey:(NSString *)APIKey completion:(DOConfirmationBlock)completion;
+
 - (void)fetchDropletsWithCompletion:(DODropletsCompletionBlock)completion;
 - (void)fetchDropletWithID:(NSInteger)dropletID completion:(DODropletCompletionBlock)completion;
 

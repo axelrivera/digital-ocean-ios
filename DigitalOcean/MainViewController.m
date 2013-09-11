@@ -10,6 +10,7 @@
 
 #import "DropletViewCell.h"
 #import "DropletViewController.h"
+#import "SettingsViewController.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -33,10 +34,10 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout"
-                                                                              style:UIBarButtonItemStylePlain
-                                                                             target:self
-                                                                             action:@selector(logoutAction:)];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [button addTarget:self action:@selector(settingsAction:) forControlEvents:UIControlEventTouchUpInside];
+
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
     self.tableView.rowHeight = 63.0;
 
@@ -89,9 +90,12 @@
 
 #pragma mark - Selector Methods
 
-- (void)logoutAction:(id)sender
+- (void)settingsAction:(id)sender
 {
-    [[MaritimoAPIClient sharedClient] logout];
+    SettingsViewController *settingsController = [[SettingsViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:settingsController];
+
+    [self.navigationController presentViewController:navController animated:YES completion:nil];
 }
 
 - (void)reloadAction:(id)sender

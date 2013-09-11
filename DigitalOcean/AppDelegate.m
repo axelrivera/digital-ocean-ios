@@ -10,6 +10,7 @@
 
 #import "MainViewController.h"
 #import "LoginViewController.h"
+#import "CredentialsViewController.h"
 
 @implementation AppDelegate
 
@@ -43,6 +44,26 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    if (self.authViewController) {
+        if ([self.authViewController.viewControllers count] > 1) {
+            id controller = self.authViewController.viewControllers[1];
+            if ([controller isKindOfClass:[CredentialsViewController class]]) {
+                NSString *clientID = [controller clientTextField].text;
+                NSString *APIKey = [controller apiTextField].text;
+                
+                if (!IsEmpty(clientID)) {
+                    [[NSUserDefaults standardUserDefaults] setObject:clientID forKey:kUserDefaultsDraftClientIDKey];
+                }
+                
+                if (!IsEmpty(APIKey)) {
+                    [[NSUserDefaults standardUserDefaults] setObject:APIKey forKey:kUserDefaultsDraftAPIKeyKey];
+                }
+                
+                [[NSUserDefaults standardUserDefaults] setValue:@YES forKey:kUserDefaultsCredentialsKey];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            }
+        }
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -69,19 +90,32 @@
 
 - (void)showLoginIfNecessary:(BOOL)animated
 {
+    if (self.authViewController) {
+        return;
+    }
+    
     if (![[MaritimoAPIClient sharedClient] isAuthenticated]) {
         LoginViewController *loginController = [[LoginViewController alloc] init];
+
+        self.authViewController = [[UINavigationController alloc] initWithRootViewController:loginController];
         
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginController];
+        BOOL validateCredentials = [[[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsCredentialsKey] boolValue];
+        if (validateCredentials) {
+            CredentialsViewController *credentialsController = [[CredentialsViewController alloc] init];
+            [self.authViewController pushViewController:credentialsController animated:NO];
+            [[NSUserDefaults standardUserDefaults] setValue:@NO forKey:kUserDefaultsCredentialsKey];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
         
+        NSTimeInterval duration = animated ? 0.5 : 0.0;
         
-        [UIView transitionWithView:self.window duration:0.0 options:UIViewAnimationOptionTransitionCrossDissolve
+        [UIView transitionWithView:self.window duration:duration options:UIViewAnimationOptionTransitionCrossDissolve
                         animations:^
          {
-             [self.window setRootViewController:navController];
+             [self.window setRootViewController:self.authViewController];
              [self.window makeKeyAndVisible];
          } completion:nil];
-        
+
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(userLoggedIn:)
                                                      name:DOUserDidLoginNotification
@@ -104,6 +138,7 @@
          [self.window setRootViewController:self.navigationController];
          [self.window makeKeyAndVisible];
      } completion:^(BOOL finished) {
+         self.authViewController = nil;
          [self.mainViewController reloadDroplets];
      }];
 }

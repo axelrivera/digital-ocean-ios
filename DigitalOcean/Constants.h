@@ -14,6 +14,10 @@
 //#define kDigitalOceanTestClientID @"web-client"
 //#define kDigitalOceanTestApiKey @"12345"
 
+#define kUserDefaultsCredentialsKey @"DigitalOceanCredentials"
+#define kUserDefaultsDraftClientIDKey @"DigitalOceanDraftClientID"
+#define kUserDefaultsDraftAPIKeyKey @"DigitalOceanDraftAPIKey"
+
 // Notifications
 
 #define DOInitialDataReloadedNotification @"DigitalOceanInitialDataNotification"

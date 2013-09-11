@@ -70,6 +70,11 @@
     void (^failureBlock)(AFHTTPRequestOperation*, NSError*) = ^(AFHTTPRequestOperation *operation, NSError *error) {
         DLog(@"Got Error for method: %@, path: %@", method, path);
         DLog(@"%@", error);
+
+        if (operation.response.statusCode == 401) {
+            [[MaritimoAPIClient sharedClient] logout];
+        }
+
         if (completion) {
             completion(nil, error);
         }
@@ -81,8 +86,6 @@
     [operation start];
 }
 
-#pragma mark - Public Methods
-
 - (void)getAuthPath:(NSString *)path
          parameters:(NSDictionary *)parameters
          completion:(DOCompletionBlock)completion
@@ -90,6 +93,35 @@
     NSMutableDictionary *dictionary = [self authDictionary];
     [dictionary addEntriesFromDictionary:parameters];
     [self actionWithMethod:kHTTPGet path:path parameters:dictionary completion:completion];
+}
+
+#pragma mark - Public Methods
+
+- (void)validateClientID:(NSString *)clientID APIKey:(NSString *)APIKey completion:(DOConfirmationBlock)completion
+{
+    if (IsEmpty(clientID) || IsEmpty(APIKey)) {
+        if (completion) {
+            completion(NO, [ARError error]);
+        }
+        return;
+    }
+
+    NSString *path = @"sizes";
+    NSDictionary *parameters = @{ @"client_id" : clientID, @"api_key" : APIKey };
+    DLog(@"Validating Credentials With Parameters:");
+    DLog(@"%@", parameters);
+
+    [self getPath:path parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        DLog(@"Credential Validation Response: %@", responseObject);
+        if (completion) {
+            completion(YES, nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        DLog(@"Credential Validation Error: %@", error);
+        if (completion) {
+            completion(NO, error);
+        }
+    }];
 }
 
 - (void)fetchDropletsWithCompletion:(DODropletsCompletionBlock)completion

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16014A5B17DFF00600A71FF5 /* CredentialsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16014A5917DFF00600A71FF5 /* CredentialsViewController.m */; };
+		16014A5C17DFF00600A71FF5 /* CredentialsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16014A5A17DFF00600A71FF5 /* CredentialsViewController.xib */; };
 		162322781791DCD700EE05EF /* DOSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 162322771791DCD700EE05EF /* DOSize.m */; };
 		162322791791DCD700EE05EF /* DOSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 162322771791DCD700EE05EF /* DOSize.m */; };
 		1623227D1791F2D300EE05EF /* DOData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623227C1791F2D300EE05EF /* DOData.m */; };
@@ -41,6 +43,9 @@
 		162423C11791178D00B77711 /* DORegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423BF1791178D00B77711 /* DORegion.m */; };
 		162423C4179117C100B77711 /* DOImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423C3179117C100B77711 /* DOImage.m */; };
 		162423C5179117C100B77711 /* DOImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 162423C3179117C100B77711 /* DOImage.m */; };
+		163EEA3F17DE977700D217C0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 163EEA3D17DE977700D217C0 /* SettingsViewController.m */; };
+		163EEA4017DE977700D217C0 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163EEA3E17DE977700D217C0 /* SettingsViewController.xib */; };
+		163EEA4317DEA88A00D217C0 /* DoubleInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 163EEA4217DEA88A00D217C0 /* DoubleInputView.m */; };
 		165ACB5917D429040004B5D5 /* ARActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 165ACB5817D429040004B5D5 /* ARActivityView.m */; };
 		1667322017D3AFDE00B125D7 /* ARError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667321A17D3AFDE00B125D7 /* ARError.m */; };
 		1667322117D3AFDE00B125D7 /* ARErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667321C17D3AFDE00B125D7 /* ARErrorDomain.m */; };
@@ -76,6 +81,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16014A5817DFF00600A71FF5 /* CredentialsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialsViewController.h; sourceTree = "<group>"; };
+		16014A5917DFF00600A71FF5 /* CredentialsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialsViewController.m; sourceTree = "<group>"; };
+		16014A5A17DFF00600A71FF5 /* CredentialsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CredentialsViewController.xib; sourceTree = "<group>"; };
 		162322761791DCD700EE05EF /* DOSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSize.h; sourceTree = "<group>"; };
 		162322771791DCD700EE05EF /* DOSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSize.m; sourceTree = "<group>"; };
 		1623227A1791E9A900EE05EF /* DigitalOcean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalOcean.h; sourceTree = "<group>"; };
@@ -90,7 +98,7 @@
 		1623228D1792124900EE05EF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1623228E1792124900EE05EF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1623228F1792124900EE05EF /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		162423801791128E00B77711 /* Digital Ocean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digital Ocean.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		162423801791128E00B77711 /* Maritimo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maritimo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		162423831791128E00B77711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		162423851791128E00B77711 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		162423871791128E00B77711 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -115,6 +123,11 @@
 		162423BF1791178D00B77711 /* DORegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DORegion.m; sourceTree = "<group>"; };
 		162423C2179117C100B77711 /* DOImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOImage.h; sourceTree = "<group>"; };
 		162423C3179117C100B77711 /* DOImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOImage.m; sourceTree = "<group>"; };
+		163EEA3C17DE977700D217C0 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		163EEA3D17DE977700D217C0 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		163EEA3E17DE977700D217C0 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		163EEA4117DEA88A00D217C0 /* DoubleInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleInputView.h; sourceTree = "<group>"; };
+		163EEA4217DEA88A00D217C0 /* DoubleInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleInputView.m; sourceTree = "<group>"; };
 		165ACB5717D429040004B5D5 /* ARActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARActivityView.h; sourceTree = "<group>"; };
 		165ACB5817D429040004B5D5 /* ARActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARActivityView.m; sourceTree = "<group>"; };
 		1667321917D3AFDE00B125D7 /* ARError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARError.h; sourceTree = "<group>"; };
@@ -207,10 +220,14 @@
 				1623228E1792124900EE05EF /* MainViewController.m */,
 				1667322417D3D2F900B125D7 /* DropletViewController.h */,
 				1667322517D3D2F900B125D7 /* DropletViewController.m */,
-				16EB74C917D95E1200A80D81 /* LoginViewController.h */,
-				16EB74CA17D95E1200A80D81 /* LoginViewController.m */,
 				16C5C86E17DD068500F22F37 /* SnapshotsViewController.h */,
 				16C5C86F17DD068500F22F37 /* SnapshotsViewController.m */,
+				163EEA3C17DE977700D217C0 /* SettingsViewController.h */,
+				163EEA3D17DE977700D217C0 /* SettingsViewController.m */,
+				16EB74C917D95E1200A80D81 /* LoginViewController.h */,
+				16EB74CA17D95E1200A80D81 /* LoginViewController.m */,
+				16014A5817DFF00600A71FF5 /* CredentialsViewController.h */,
+				16014A5917DFF00600A71FF5 /* CredentialsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -218,10 +235,12 @@
 		162322941792127800EE05EF /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				16EB74CB17D95E1200A80D81 /* LoginViewController.xib */,
 				1667322617D3D2F900B125D7 /* DropletViewController.xib */,
 				1623228F1792124900EE05EF /* MainViewController.xib */,
 				16C5C87017DD068500F22F37 /* SnapshotsViewController.xib */,
+				163EEA3E17DE977700D217C0 /* SettingsViewController.xib */,
+				16EB74CB17D95E1200A80D81 /* LoginViewController.xib */,
+				16014A5A17DFF00600A71FF5 /* CredentialsViewController.xib */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -240,7 +259,7 @@
 		162423811791128E00B77711 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				162423801791128E00B77711 /* Digital Ocean.app */,
+				162423801791128E00B77711 /* Maritimo.app */,
 				1624239B1791128E00B77711 /* DigitalOceanTests.xctest */,
 			);
 			name = Products;
@@ -373,6 +392,8 @@
 				16C5C85D17DAC1A300F22F37 /* ARColorButton.m */,
 				16C5C86817DCE0C600F22F37 /* DropletActionView.h */,
 				16C5C86917DCE0C600F22F37 /* DropletActionView.m */,
+				163EEA4117DEA88A00D217C0 /* DoubleInputView.h */,
+				163EEA4217DEA88A00D217C0 /* DoubleInputView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -396,7 +417,7 @@
 			);
 			name = DigitalOcean;
 			productName = DigitalOcean;
-			productReference = 162423801791128E00B77711 /* Digital Ocean.app */;
+			productReference = 162423801791128E00B77711 /* Maritimo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1624239A1791128E00B77711 /* DigitalOceanTests */ = {
@@ -460,8 +481,10 @@
 				16C5C87217DD068500F22F37 /* SnapshotsViewController.xib in Resources */,
 				16EB74CD17D95E1200A80D81 /* LoginViewController.xib in Resources */,
 				1624238E1791128E00B77711 /* InfoPlist.strings in Resources */,
+				16014A5C17DFF00600A71FF5 /* CredentialsViewController.xib in Resources */,
 				162322921792124900EE05EF /* MainViewController.xib in Resources */,
 				162423961791128E00B77711 /* Images.xcassets in Resources */,
+				163EEA4017DE977700D217C0 /* SettingsViewController.xib in Resources */,
 				1667322817D3D2F900B125D7 /* DropletViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,8 +538,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				163EEA4317DEA88A00D217C0 /* DoubleInputView.m in Sources */,
 				1623227D1791F2D300EE05EF /* DOData.m in Sources */,
 				16EB74CC17D95E1200A80D81 /* LoginViewController.m in Sources */,
+				16014A5B17DFF00600A71FF5 /* CredentialsViewController.m in Sources */,
 				16C5C87517DD0D9000F22F37 /* DOBackup.m in Sources */,
 				162322781791DCD700EE05EF /* DOSize.m in Sources */,
 				162423C4179117C100B77711 /* DOImage.m in Sources */,
@@ -542,6 +567,7 @@
 				16DF7CCD1793A49900993D35 /* DropletViewCell.m in Sources */,
 				1667322117D3AFDE00B125D7 /* ARErrorDomain.m in Sources */,
 				1623228A17920F2600EE05EF /* UIColor+DigitalOcean.m in Sources */,
+				163EEA3F17DE977700D217C0 /* SettingsViewController.m in Sources */,
 				162423B5179114A400B77711 /* DigitalOceanAPIClient.m in Sources */,
 				16EB74C817D9572900A80D81 /* MaritimoAPIClient.m in Sources */,
 			);
@@ -678,7 +704,7 @@
 				GCC_PREFIX_HEADER = "DigitalOcean/DigitalOcean-Prefix.pch";
 				INFOPLIST_FILE = "DigitalOcean/DigitalOcean-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "Digital Ocean";
+				PRODUCT_NAME = Maritimo;
 				PROVISIONING_PROFILE = "9886F3D8-9FFF-450D-A238-70B8DBFDC062";
 				WRAPPER_EXTENSION = app;
 			};
@@ -695,7 +721,7 @@
 				GCC_PREFIX_HEADER = "DigitalOcean/DigitalOcean-Prefix.pch";
 				INFOPLIST_FILE = "DigitalOcean/DigitalOcean-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "Digital Ocean";
+				PRODUCT_NAME = Maritimo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -15,6 +15,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) MainViewController *mainViewController;
+@property (strong, nonatomic) UINavigationController *authViewController;
 
 - (void)showLoginIfNecessary:(BOOL)animated;
 
