@@ -46,6 +46,14 @@ typedef void(^DODropletCompletionBlock)(DODroplet *droplet, NSError *error);
 - (void)validateEventWithID:(NSInteger)eventID wait:(BOOL)wait completion:(DOConfirmationBlock)completion;
 
 - (NSString *)clientID;
+- (void)setClientID:(NSString *)clientID;
+
 - (NSString *)APIKey;
+- (void)setAPIKey:(NSString *)APIKey;
+
+- (BOOL)isAuthenticated;
+- (void)invalidateAuthentication;
+- (void)logout;
+
 
 @end

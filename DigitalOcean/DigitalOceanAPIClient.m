@@ -72,7 +72,7 @@
         DLog(@"%@", error);
 
         if (operation.response.statusCode == 401) {
-            [[MaritimoAPIClient sharedClient] logout];
+            [self logout];
         }
 
         if (completion) {
@@ -325,24 +325,42 @@
 
 - (NSString *)clientID
 {
-    NSString *string = nil;
-#ifdef kDigitalOceanTestClientID
-    string = kDigitalOceanTestClientID;
-#else
-    string = [[MaritimoAPIClient sharedClient] clientID];
-#endif
-    return string;;
+    NSString *string = [[NSUserDefaults standardUserDefaults] objectForKey:kDigitalOceanClientIDKey];
+    return IsEmpty(string) ? @"" : string;
+}
+
+- (void)setClientID:(NSString *)clientID
+{
+    [[NSUserDefaults standardUserDefaults] setObject:clientID forKey:kDigitalOceanClientIDKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (NSString *)APIKey
 {
-    NSString *string = nil;
-#ifdef kDigitalOceanTestApiKey
-    string = kDigitalOceanTestApiKey;
-#else
-    string = [[MaritimoAPIClient sharedClient] APIKey];
-#endif
-    return string;
+    NSString *string = [[NSUserDefaults standardUserDefaults] objectForKey:kDigitalOceanAPIKeyKey];
+    return IsEmpty(string) ? @"" : string;
+}
+
+- (void)setAPIKey:(NSString *)APIKey
+{
+    [[NSUserDefaults standardUserDefaults] setObject:APIKey forKey:kDigitalOceanAPIKeyKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (BOOL)isAuthenticated
+{
+    return !IsEmpty([self clientID]) && !IsEmpty([self APIKey]);
+}
+
+- (void)invalidateAuthentication
+{
+    [self setAPIKey:nil];
+}
+
+- (void)logout
+{
+    [self invalidateAuthentication];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DOUserDidLogoutNotification object:nil];
 }
 
 - (NSMutableDictionary *)authDictionary

@@ -8,11 +8,12 @@
 
 #import "MainViewController.h"
 
+#import "DropletAddViewController.h"
+
 #import "DropletViewCell.h"
 #import "DropletViewController.h"
-#import "SettingsViewController.h"
 
-@interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MainViewController () <UITableViewDataSource, UITableViewDelegate, DropletAddViewControllerDelegate>
 
 @property (strong, nonatomic) UITableViewController *tableViewController;
 
@@ -24,8 +25,10 @@
 {
     self = [super initWithNibName:@"MainViewController" bundle:nil];
     if (self) {
-        self.title = @"My Droplets";
+        self.title = @"Droplets";
         _dataSource = @[];
+
+        self.tabBarItem.image = [UIImage imageNamed:@"droplet"];
     }
     return self;
 }
@@ -33,13 +36,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    [button addTarget:self action:@selector(settingsAction:) forControlEvents:UIControlEventTouchUpInside];
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-    
-    self.tableView.rowHeight = 63.0;
+    self.navigationItem.title = @"My Droplets";
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                           target:self
+                                                                                           action:@selector(addAction:)];
 
     self.tableViewController = [[UITableViewController alloc]initWithStyle:UITableViewStylePlain];
     [self addChildViewController:self.tableViewController];
@@ -51,6 +53,7 @@
                                       forControlEvents:UIControlEventValueChanged];
 
     self.tableViewController.tableView = self.tableView;
+    self.tableView.rowHeight = 63.0;
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(dropletsUpdated:)
@@ -61,13 +64,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    //self.title = @"Digital Ocean";
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    //self.title = @"Back";
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,11 +91,12 @@
 
 #pragma mark - Selector Methods
 
-- (void)settingsAction:(id)sender
+- (void)addAction:(id)sender
 {
-    SettingsViewController *settingsController = [[SettingsViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:settingsController];
+    DropletAddViewController *addController = [[DropletAddViewController alloc] init];
+    addController.delegate = self;
 
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:addController];
     [self.navigationController presentViewController:navController animated:YES completion:nil];
 }
 
@@ -118,12 +120,19 @@
     }
 }
 
-#pragma mark - UITableViewDataSource Methods
+#pragma mark - UIViewControllerDelegateMethods
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)dropletAddViewControllerDidFinish:(DropletAddViewController *)controller
 {
-    return 1;
+
 }
+
+- (void)dropletAddViewControllerDidCancel:(DropletAddViewController *)controller
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITableViewDataSource Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -138,7 +147,7 @@
     if (cell == nil) {
         cell = [[DropletViewCell alloc] initWithReuseIdentifier:CellIdentifier];
     }
-    
+
     DODroplet *droplet = self.dataSource[indexPath.row];
 
     cell.nameLabel.text = droplet.name;
@@ -149,7 +158,7 @@
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-    
+
     return cell;
 }
 
@@ -158,11 +167,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    
     DODroplet *droplet = self.dataSource[indexPath.row];
+
+    self.hidesBottomBarWhenPushed = YES;
 
     DropletViewController *dropletController = [[DropletViewController alloc] initWithDroplet:droplet];
     [self.navigationController pushViewController:dropletController animated:YES];
+
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 @end

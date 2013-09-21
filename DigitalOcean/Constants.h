@@ -7,6 +7,7 @@
 //
 
 #define kMaritimoHost @"https://maritimo.herokuapp.com"
+//#define kMaritimoHost @"https://maritimo-sharingan.fwd.wf/"
 
 #define kDigitalOceanHost @"https://api.digitalocean.com"
 //#define kDigitalOceanHost @"https://ocean-sharingan.fwd.wf/"
@@ -14,7 +15,6 @@
 //#define kDigitalOceanTestClientID @"web-client"
 //#define kDigitalOceanTestApiKey @"12345"
 
-#define kUserDefaultsCredentialsKey @"DigitalOceanCredentials"
 #define kUserDefaultsDraftClientIDKey @"DigitalOceanDraftClientID"
 #define kUserDefaultsDraftAPIKeyKey @"DigitalOceanDraftAPIKey"
 

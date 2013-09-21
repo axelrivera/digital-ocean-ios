@@ -19,6 +19,7 @@
     self = [super initWithNibName:@"SettingsViewController" bundle:nil];
     if (self) {
         self.title = @"Settings";
+        self.tabBarItem.image = [UIImage imageNamed:@"gear"];
     }
     return self;
 }
@@ -26,23 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                                           target:self
-                                                                                           action:@selector(dismissAction:)];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Selector Methods
-
-- (void)dismissAction:(id)sender
-{
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
@@ -98,7 +88,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {
-        [[MaritimoAPIClient sharedClient] logout];
+        [[DigitalOceanAPIClient sharedClient] logout];
     }
 }
  

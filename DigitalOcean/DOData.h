@@ -11,9 +11,14 @@
 @interface DOData : NSObject
 
 @property (strong, nonatomic) NSMutableArray *droplets;
+
+@property (strong, nonatomic) NSDictionary *sizes;
 @property (strong, nonatomic) NSDictionary *regions;
 @property (strong, nonatomic) NSDictionary *images;
-@property (strong, nonatomic) NSDictionary *sizes;
+
+@property (strong, nonatomic) NSArray *sizesArray;
+@property (strong, nonatomic) NSArray *regionsArray;
+@property (strong, nonatomic) NSArray *imagesArray;
 
 - (void)reloadInitialDataWithCompletion:(void(^)(void))completion;
 

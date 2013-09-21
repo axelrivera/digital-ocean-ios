@@ -17,6 +17,7 @@
         self.objectID = [dictionary[@"id"] integerValue];
         _name = [dictionary[@"name"] copy];
         _distribution = [dictionary[@"distribution"] copy];
+        _isPublic = [dictionary[@"public"] boolValue];
     }
     return self;
 }

@@ -17,9 +17,12 @@
     self = [super init];
     if (self) {
         _droplets = [@[] mutableCopy];
-        _images = @{};
-        _regions = @{};
         _sizes = @{};
+        _regions = @{};
+        _images = @{};
+        _sizesArray = @[];
+        _regionsArray = @[];
+        _imagesArray = @[];
     }
     return self;
 }
@@ -83,8 +86,10 @@
     [[DigitalOceanAPIClient sharedClient] fetchImagesWithCompletion:^(NSArray *images, NSError *error) {
         if (images) {
             self.images = [images dictionaryWithIDKey];
+            self.imagesArray = images;
         } else {
             self.images = @{};
+            self.imagesArray = @[];
         }
 
         if (completion) {
@@ -98,8 +103,10 @@
     [[DigitalOceanAPIClient sharedClient] fetchRegionsWithCompletion:^(NSArray *regions, NSError *error) {
         if (regions) {
             self.regions = [regions dictionaryWithIDKey];
+            self.regionsArray = regions;
         } else {
             self.regions = @{};
+            self.regionsArray = @[];
         }
 
         if (completion) {
@@ -113,8 +120,10 @@
     [[DigitalOceanAPIClient sharedClient] fetchSizesWithCompletion:^(NSArray *sizes, NSError *error) {
         if (sizes) {
             self.sizes = [sizes dictionaryWithIDKey];
+            self.sizesArray = sizes;
         } else {
             self.sizes = @{};
+            self.sizesArray = @[];
         }
         
         if (completion) {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16014A5B17DFF00600A71FF5 /* CredentialsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16014A5917DFF00600A71FF5 /* CredentialsViewController.m */; };
 		16014A5C17DFF00600A71FF5 /* CredentialsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16014A5A17DFF00600A71FF5 /* CredentialsViewController.xib */; };
 		162322781791DCD700EE05EF /* DOSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 162322771791DCD700EE05EF /* DOSize.m */; };
 		162322791791DCD700EE05EF /* DOSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 162322771791DCD700EE05EF /* DOSize.m */; };
@@ -46,6 +45,8 @@
 		163EEA3F17DE977700D217C0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 163EEA3D17DE977700D217C0 /* SettingsViewController.m */; };
 		163EEA4017DE977700D217C0 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163EEA3E17DE977700D217C0 /* SettingsViewController.xib */; };
 		163EEA4317DEA88A00D217C0 /* DoubleInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 163EEA4217DEA88A00D217C0 /* DoubleInputView.m */; };
+		1656835417E7EA980096D795 /* DropletAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1656835217E7EA980096D795 /* DropletAddViewController.m */; };
+		1656835517E7EA980096D795 /* DropletAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1656835317E7EA980096D795 /* DropletAddViewController.xib */; };
 		165ACB5917D429040004B5D5 /* ARActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 165ACB5817D429040004B5D5 /* ARActivityView.m */; };
 		1667322017D3AFDE00B125D7 /* ARError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667321A17D3AFDE00B125D7 /* ARError.m */; };
 		1667322117D3AFDE00B125D7 /* ARErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667321C17D3AFDE00B125D7 /* ARErrorDomain.m */; };
@@ -53,6 +54,20 @@
 		1667322717D3D2F900B125D7 /* DropletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667322517D3D2F900B125D7 /* DropletViewController.m */; };
 		1667322817D3D2F900B125D7 /* DropletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1667322617D3D2F900B125D7 /* DropletViewController.xib */; };
 		1667322B17D3D89F00B125D7 /* DODropletAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1667322A17D3D89F00B125D7 /* DODropletAction.m */; };
+		169447B317E809EA00DECA84 /* DropletSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169447B117E809EA00DECA84 /* DropletSizeViewController.m */; };
+		169447B417E809EA00DECA84 /* DropletSizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169447B217E809EA00DECA84 /* DropletSizeViewController.xib */; };
+		169447B817E80A0F00DECA84 /* DropletRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169447B617E80A0F00DECA84 /* DropletRegionViewController.m */; };
+		169447B917E80A0F00DECA84 /* DropletRegionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169447B717E80A0F00DECA84 /* DropletRegionViewController.xib */; };
+		169447BD17E80A2500DECA84 /* DropletImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169447BB17E80A2500DECA84 /* DropletImageViewController.m */; };
+		169447BE17E80A2500DECA84 /* DropletImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169447BC17E80A2500DECA84 /* DropletImageViewController.xib */; };
+		169447C217E80A4000DECA84 /* DropletOptionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169447C017E80A4000DECA84 /* DropletOptionalViewController.m */; };
+		169447C317E80A4000DECA84 /* DropletOptionalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169447C117E80A4000DECA84 /* DropletOptionalViewController.xib */; };
+		16B91C1717ED187100A3DE87 /* DomainsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B91C1517ED187100A3DE87 /* DomainsViewController.m */; };
+		16B91C1817ED187100A3DE87 /* DomainsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B91C1617ED187100A3DE87 /* DomainsViewController.xib */; };
+		16B91C1C17ED194100A3DE87 /* KeysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B91C1A17ED194100A3DE87 /* KeysViewController.m */; };
+		16B91C1D17ED194100A3DE87 /* KeysViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B91C1B17ED194100A3DE87 /* KeysViewController.xib */; };
+		16B91C2117ED195500A3DE87 /* ImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B91C1F17ED195500A3DE87 /* ImagesViewController.m */; };
+		16B91C2217ED195500A3DE87 /* ImagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B91C2017ED195500A3DE87 /* ImagesViewController.xib */; };
 		16C5C85E17DAC1A300F22F37 /* ARColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C5C85D17DAC1A300F22F37 /* ARColorButton.m */; };
 		16C5C86417DCD3FB00F22F37 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C5C86317DCD3FB00F22F37 /* UIImage+Tint.m */; };
 		16C5C86717DCD70700F22F37 /* UIButton+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C5C86617DCD70700F22F37 /* UIButton+Color.m */; };
@@ -64,7 +79,6 @@
 		16DF7CCD1793A49900993D35 /* DropletViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DF7CCC1793A49900993D35 /* DropletViewCell.m */; };
 		16DF7CCE1793A49900993D35 /* DropletViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DF7CCC1793A49900993D35 /* DropletViewCell.m */; };
 		16E5A60517DAA02700A6DCBC /* UILabel+DigitalOcean.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E5A60417DAA02700A6DCBC /* UILabel+DigitalOcean.m */; };
-		16EB74C817D9572900A80D81 /* MaritimoAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB74C717D9572900A80D81 /* MaritimoAPIClient.m */; };
 		16EB74CC17D95E1200A80D81 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB74CA17D95E1200A80D81 /* LoginViewController.m */; };
 		16EB74CD17D95E1200A80D81 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16EB74CB17D95E1200A80D81 /* LoginViewController.xib */; };
 		C0A0F1E60B4B43B8B0B86811 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C753B515C54A2F828FBCC3 /* libPods.a */; };
@@ -81,8 +95,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16014A5817DFF00600A71FF5 /* CredentialsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialsViewController.h; sourceTree = "<group>"; };
-		16014A5917DFF00600A71FF5 /* CredentialsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialsViewController.m; sourceTree = "<group>"; };
 		16014A5A17DFF00600A71FF5 /* CredentialsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CredentialsViewController.xib; sourceTree = "<group>"; };
 		162322761791DCD700EE05EF /* DOSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSize.h; sourceTree = "<group>"; };
 		162322771791DCD700EE05EF /* DOSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSize.m; sourceTree = "<group>"; };
@@ -128,6 +140,9 @@
 		163EEA3E17DE977700D217C0 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		163EEA4117DEA88A00D217C0 /* DoubleInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleInputView.h; sourceTree = "<group>"; };
 		163EEA4217DEA88A00D217C0 /* DoubleInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleInputView.m; sourceTree = "<group>"; };
+		1656835117E7EA980096D795 /* DropletAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropletAddViewController.h; sourceTree = "<group>"; };
+		1656835217E7EA980096D795 /* DropletAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletAddViewController.m; sourceTree = "<group>"; };
+		1656835317E7EA980096D795 /* DropletAddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropletAddViewController.xib; sourceTree = "<group>"; };
 		165ACB5717D429040004B5D5 /* ARActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARActivityView.h; sourceTree = "<group>"; };
 		165ACB5817D429040004B5D5 /* ARActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARActivityView.m; sourceTree = "<group>"; };
 		1667321917D3AFDE00B125D7 /* ARError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARError.h; sourceTree = "<group>"; };
@@ -141,6 +156,27 @@
 		1667322617D3D2F900B125D7 /* DropletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropletViewController.xib; sourceTree = "<group>"; };
 		1667322917D3D89F00B125D7 /* DODropletAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DODropletAction.h; sourceTree = "<group>"; };
 		1667322A17D3D89F00B125D7 /* DODropletAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DODropletAction.m; sourceTree = "<group>"; };
+		169447B017E809EA00DECA84 /* DropletSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropletSizeViewController.h; sourceTree = "<group>"; };
+		169447B117E809EA00DECA84 /* DropletSizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletSizeViewController.m; sourceTree = "<group>"; };
+		169447B217E809EA00DECA84 /* DropletSizeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropletSizeViewController.xib; sourceTree = "<group>"; };
+		169447B517E80A0F00DECA84 /* DropletRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropletRegionViewController.h; sourceTree = "<group>"; };
+		169447B617E80A0F00DECA84 /* DropletRegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletRegionViewController.m; sourceTree = "<group>"; };
+		169447B717E80A0F00DECA84 /* DropletRegionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropletRegionViewController.xib; sourceTree = "<group>"; };
+		169447BA17E80A2500DECA84 /* DropletImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropletImageViewController.h; sourceTree = "<group>"; };
+		169447BB17E80A2500DECA84 /* DropletImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletImageViewController.m; sourceTree = "<group>"; };
+		169447BC17E80A2500DECA84 /* DropletImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropletImageViewController.xib; sourceTree = "<group>"; };
+		169447BF17E80A4000DECA84 /* DropletOptionalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropletOptionalViewController.h; sourceTree = "<group>"; };
+		169447C017E80A4000DECA84 /* DropletOptionalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletOptionalViewController.m; sourceTree = "<group>"; };
+		169447C117E80A4000DECA84 /* DropletOptionalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropletOptionalViewController.xib; sourceTree = "<group>"; };
+		16B91C1417ED187100A3DE87 /* DomainsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomainsViewController.h; sourceTree = "<group>"; };
+		16B91C1517ED187100A3DE87 /* DomainsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomainsViewController.m; sourceTree = "<group>"; };
+		16B91C1617ED187100A3DE87 /* DomainsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DomainsViewController.xib; sourceTree = "<group>"; };
+		16B91C1917ED194100A3DE87 /* KeysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeysViewController.h; sourceTree = "<group>"; };
+		16B91C1A17ED194100A3DE87 /* KeysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeysViewController.m; sourceTree = "<group>"; };
+		16B91C1B17ED194100A3DE87 /* KeysViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeysViewController.xib; sourceTree = "<group>"; };
+		16B91C1E17ED195500A3DE87 /* ImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesViewController.h; sourceTree = "<group>"; };
+		16B91C1F17ED195500A3DE87 /* ImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesViewController.m; sourceTree = "<group>"; };
+		16B91C2017ED195500A3DE87 /* ImagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesViewController.xib; sourceTree = "<group>"; };
 		16C5C85C17DAC1A300F22F37 /* ARColorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARColorButton.h; sourceTree = "<group>"; };
 		16C5C85D17DAC1A300F22F37 /* ARColorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARColorButton.m; sourceTree = "<group>"; };
 		16C5C86217DCD3FB00F22F37 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
@@ -160,8 +196,6 @@
 		16DF7CCC1793A49900993D35 /* DropletViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropletViewCell.m; sourceTree = "<group>"; };
 		16E5A60317DAA02700A6DCBC /* UILabel+DigitalOcean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DigitalOcean.h"; sourceTree = "<group>"; };
 		16E5A60417DAA02700A6DCBC /* UILabel+DigitalOcean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DigitalOcean.m"; sourceTree = "<group>"; };
-		16EB74C617D9572900A80D81 /* MaritimoAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaritimoAPIClient.h; sourceTree = "<group>"; };
-		16EB74C717D9572900A80D81 /* MaritimoAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaritimoAPIClient.m; sourceTree = "<group>"; };
 		16EB74C917D95E1200A80D81 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		16EB74CA17D95E1200A80D81 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		16EB74CB17D95E1200A80D81 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -226,8 +260,22 @@
 				163EEA3D17DE977700D217C0 /* SettingsViewController.m */,
 				16EB74C917D95E1200A80D81 /* LoginViewController.h */,
 				16EB74CA17D95E1200A80D81 /* LoginViewController.m */,
-				16014A5817DFF00600A71FF5 /* CredentialsViewController.h */,
-				16014A5917DFF00600A71FF5 /* CredentialsViewController.m */,
+				1656835117E7EA980096D795 /* DropletAddViewController.h */,
+				1656835217E7EA980096D795 /* DropletAddViewController.m */,
+				169447B017E809EA00DECA84 /* DropletSizeViewController.h */,
+				169447B117E809EA00DECA84 /* DropletSizeViewController.m */,
+				169447B517E80A0F00DECA84 /* DropletRegionViewController.h */,
+				169447B617E80A0F00DECA84 /* DropletRegionViewController.m */,
+				169447BA17E80A2500DECA84 /* DropletImageViewController.h */,
+				169447BB17E80A2500DECA84 /* DropletImageViewController.m */,
+				169447BF17E80A4000DECA84 /* DropletOptionalViewController.h */,
+				169447C017E80A4000DECA84 /* DropletOptionalViewController.m */,
+				16B91C1417ED187100A3DE87 /* DomainsViewController.h */,
+				16B91C1517ED187100A3DE87 /* DomainsViewController.m */,
+				16B91C1917ED194100A3DE87 /* KeysViewController.h */,
+				16B91C1A17ED194100A3DE87 /* KeysViewController.m */,
+				16B91C1E17ED195500A3DE87 /* ImagesViewController.h */,
+				16B91C1F17ED195500A3DE87 /* ImagesViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -241,6 +289,14 @@
 				163EEA3E17DE977700D217C0 /* SettingsViewController.xib */,
 				16EB74CB17D95E1200A80D81 /* LoginViewController.xib */,
 				16014A5A17DFF00600A71FF5 /* CredentialsViewController.xib */,
+				1656835317E7EA980096D795 /* DropletAddViewController.xib */,
+				169447B217E809EA00DECA84 /* DropletSizeViewController.xib */,
+				169447B717E80A0F00DECA84 /* DropletRegionViewController.xib */,
+				169447BC17E80A2500DECA84 /* DropletImageViewController.xib */,
+				169447C117E80A4000DECA84 /* DropletOptionalViewController.xib */,
+				16B91C1617ED187100A3DE87 /* DomainsViewController.xib */,
+				16B91C1B17ED194100A3DE87 /* KeysViewController.xib */,
+				16B91C2017ED195500A3DE87 /* ImagesViewController.xib */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -332,8 +388,6 @@
 				162423B4179114A400B77711 /* DigitalOceanAPIClient.m */,
 				1623227B1791F2D300EE05EF /* DOData.h */,
 				1623227C1791F2D300EE05EF /* DOData.m */,
-				16EB74C617D9572900A80D81 /* MaritimoAPIClient.h */,
-				16EB74C717D9572900A80D81 /* MaritimoAPIClient.m */,
 			);
 			name = Singletons;
 			sourceTree = "<group>";
@@ -481,11 +535,19 @@
 				16C5C87217DD068500F22F37 /* SnapshotsViewController.xib in Resources */,
 				16EB74CD17D95E1200A80D81 /* LoginViewController.xib in Resources */,
 				1624238E1791128E00B77711 /* InfoPlist.strings in Resources */,
+				169447BE17E80A2500DECA84 /* DropletImageViewController.xib in Resources */,
+				16B91C1817ED187100A3DE87 /* DomainsViewController.xib in Resources */,
 				16014A5C17DFF00600A71FF5 /* CredentialsViewController.xib in Resources */,
+				169447B417E809EA00DECA84 /* DropletSizeViewController.xib in Resources */,
+				169447B917E80A0F00DECA84 /* DropletRegionViewController.xib in Resources */,
 				162322921792124900EE05EF /* MainViewController.xib in Resources */,
 				162423961791128E00B77711 /* Images.xcassets in Resources */,
 				163EEA4017DE977700D217C0 /* SettingsViewController.xib in Resources */,
 				1667322817D3D2F900B125D7 /* DropletViewController.xib in Resources */,
+				16B91C1D17ED194100A3DE87 /* KeysViewController.xib in Resources */,
+				169447C317E80A4000DECA84 /* DropletOptionalViewController.xib in Resources */,
+				16B91C2217ED195500A3DE87 /* ImagesViewController.xib in Resources */,
+				1656835517E7EA980096D795 /* DropletAddViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,9 +601,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				163EEA4317DEA88A00D217C0 /* DoubleInputView.m in Sources */,
+				169447C217E80A4000DECA84 /* DropletOptionalViewController.m in Sources */,
 				1623227D1791F2D300EE05EF /* DOData.m in Sources */,
 				16EB74CC17D95E1200A80D81 /* LoginViewController.m in Sources */,
-				16014A5B17DFF00600A71FF5 /* CredentialsViewController.m in Sources */,
+				16B91C1717ED187100A3DE87 /* DomainsViewController.m in Sources */,
 				16C5C87517DD0D9000F22F37 /* DOBackup.m in Sources */,
 				162322781791DCD700EE05EF /* DOSize.m in Sources */,
 				162423C4179117C100B77711 /* DOImage.m in Sources */,
@@ -551,7 +614,9 @@
 				16C5C87817DD0DB900F22F37 /* DOSnapshot.m in Sources */,
 				1667322717D3D2F900B125D7 /* DropletViewController.m in Sources */,
 				162423941791128E00B77711 /* AppDelegate.m in Sources */,
+				169447B817E80A0F00DECA84 /* DropletRegionViewController.m in Sources */,
 				1667322017D3AFDE00B125D7 /* ARError.m in Sources */,
+				16B91C2117ED195500A3DE87 /* ImagesViewController.m in Sources */,
 				16E5A60517DAA02700A6DCBC /* UILabel+DigitalOcean.m in Sources */,
 				162423901791128E00B77711 /* main.m in Sources */,
 				16C5C86417DCD3FB00F22F37 /* UIImage+Tint.m in Sources */,
@@ -561,15 +626,18 @@
 				1667322B17D3D89F00B125D7 /* DODropletAction.m in Sources */,
 				162322901792124900EE05EF /* MainViewController.m in Sources */,
 				162423C01791178D00B77711 /* DORegion.m in Sources */,
+				16B91C1C17ED194100A3DE87 /* KeysViewController.m in Sources */,
 				162423BC1791172D00B77711 /* DODroplet.m in Sources */,
 				16C5C86A17DCE0C600F22F37 /* DropletActionView.m in Sources */,
 				1667322217D3AFDE00B125D7 /* ARModelObject.m in Sources */,
+				169447BD17E80A2500DECA84 /* DropletImageViewController.m in Sources */,
 				16DF7CCD1793A49900993D35 /* DropletViewCell.m in Sources */,
 				1667322117D3AFDE00B125D7 /* ARErrorDomain.m in Sources */,
+				169447B317E809EA00DECA84 /* DropletSizeViewController.m in Sources */,
 				1623228A17920F2600EE05EF /* UIColor+DigitalOcean.m in Sources */,
+				1656835417E7EA980096D795 /* DropletAddViewController.m in Sources */,
 				163EEA3F17DE977700D217C0 /* SettingsViewController.m in Sources */,
 				162423B5179114A400B77711 /* DigitalOceanAPIClient.m in Sources */,
-				16EB74C817D9572900A80D81 /* MaritimoAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

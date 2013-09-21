@@ -9,8 +9,11 @@
 #import "AppDelegate.h"
 
 #import "MainViewController.h"
+#import "DomainsViewController.h"
+#import "KeysViewController.h"
+#import "ImagesViewController.h"
+#import "SettingsViewController.h"
 #import "LoginViewController.h"
-#import "CredentialsViewController.h"
 
 @implementation AppDelegate
 
@@ -18,14 +21,32 @@
 {
     [[UINavigationBar appearance] setTintColor:[UIColor do_blueColor]];
     [[UISegmentedControl appearance] setTintColor:[UIColor do_blueColor]];
+    [[UIToolbar appearance] setTintColor:[UIColor do_blueColor]];
+    [[UITabBar appearance] setTintColor:[UIColor do_blueColor]];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor do_blueColor];
 
-    self.mainViewController = [[MainViewController alloc] init];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
+    self.mainController = [[MainViewController alloc] init];
+    self.domainsController = [[DomainsViewController alloc] init];
+    self.imagesController = [[ImagesViewController alloc] init];
+    self.keysController = [[KeysViewController alloc] init];
+    self.settingsController = [[SettingsViewController alloc] init];
+
+    UINavigationController *mainNavigation = [[UINavigationController alloc] initWithRootViewController:self.mainController];
+    UINavigationController *domainsNavigation = [[UINavigationController alloc] initWithRootViewController:self.domainsController];
+    UINavigationController *imagesNavigation = [[UINavigationController alloc] initWithRootViewController:self.imagesController];
+    UINavigationController *keysNavigation = [[UINavigationController alloc] initWithRootViewController:self.keysController];
+    UINavigationController *settingsNavigation = [[UINavigationController alloc] initWithRootViewController:self.settingsController];
+
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[ mainNavigation,
+                                               imagesNavigation,
+                                               keysNavigation,
+                                               domainsNavigation,
+                                               settingsNavigation ];
     
-    [self.window setRootViewController:self.navigationController];
+    [self.window setRootViewController:self.tabBarController];
     [self.window makeKeyAndVisible];
     
     [self showLoginIfNecessary:NO];
@@ -45,22 +66,17 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     if (self.authViewController) {
-        if ([self.authViewController.viewControllers count] > 1) {
-            id controller = self.authViewController.viewControllers[1];
-            if ([controller isKindOfClass:[CredentialsViewController class]]) {
-                NSString *clientID = [controller clientTextField].text;
-                NSString *APIKey = [controller apiTextField].text;
-                
-                if (!IsEmpty(clientID)) {
-                    [[NSUserDefaults standardUserDefaults] setObject:clientID forKey:kUserDefaultsDraftClientIDKey];
-                }
-                
-                if (!IsEmpty(APIKey)) {
-                    [[NSUserDefaults standardUserDefaults] setObject:APIKey forKey:kUserDefaultsDraftAPIKeyKey];
-                }
-                
-                [[NSUserDefaults standardUserDefaults] setValue:@YES forKey:kUserDefaultsCredentialsKey];
-                [[NSUserDefaults standardUserDefaults] synchronize];
+        id controller = self.authViewController.viewControllers[0];
+        if ([controller isKindOfClass:[LoginViewController class]]) {
+            NSString *clientID = [controller clientTextField].text;
+            NSString *APIKey = [controller apiTextField].text;
+
+            if (!IsEmpty(clientID)) {
+                [[NSUserDefaults standardUserDefaults] setObject:clientID forKey:kUserDefaultsDraftClientIDKey];
+            }
+
+            if (!IsEmpty(APIKey)) {
+                [[NSUserDefaults standardUserDefaults] setObject:APIKey forKey:kUserDefaultsDraftAPIKeyKey];
             }
         }
     }
@@ -94,18 +110,10 @@
         return;
     }
     
-    if (![[MaritimoAPIClient sharedClient] isAuthenticated]) {
+    if (![[DigitalOceanAPIClient sharedClient] isAuthenticated]) {
         LoginViewController *loginController = [[LoginViewController alloc] init];
 
         self.authViewController = [[UINavigationController alloc] initWithRootViewController:loginController];
-        
-        BOOL validateCredentials = [[[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsCredentialsKey] boolValue];
-        if (validateCredentials) {
-            CredentialsViewController *credentialsController = [[CredentialsViewController alloc] init];
-            [self.authViewController pushViewController:credentialsController animated:NO];
-            [[NSUserDefaults standardUserDefaults] setValue:@NO forKey:kUserDefaultsCredentialsKey];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
         
         NSTimeInterval duration = animated ? 0.5 : 0.0;
         
@@ -121,7 +129,7 @@
                                                      name:DOUserDidLoginNotification
                                                    object:nil];
     } else {
-        [self.mainViewController reloadDroplets];
+        [self.mainController reloadDroplets];
     }
 }
 
@@ -131,15 +139,19 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:DOUserDidLoginNotification object:nil];
     
-    [self.navigationController popToRootViewControllerAnimated:NO];
     [UIView transitionWithView:self.window duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^
      {
-         [self.window setRootViewController:self.navigationController];
+         self.tabBarController.selectedIndex = 0;
+
+         UINavigationController *navController = (UINavigationController *)self.tabBarController.selectedViewController;
+         [navController popToRootViewControllerAnimated:NO];
+
+         [self.window setRootViewController:self.tabBarController];
          [self.window makeKeyAndVisible];
      } completion:^(BOOL finished) {
          self.authViewController = nil;
-         [self.mainViewController reloadDroplets];
+         [self.mainController reloadDroplets];
      }];
 }
 

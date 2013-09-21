@@ -14,5 +14,6 @@
 
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *distribution;
+@property (assign, nonatomic) BOOL isPublic;
 
 @end
